@@ -14,7 +14,7 @@
                 "Choice_Description": "Right",
                 "Choice_link": 3
             }
-        ],
+        ]
             
     },
     {
@@ -32,7 +32,7 @@
                 "Choice_Description": "Run back down the tunnel",
                 "Choice_link": 6
             }
-        ],
+        ]
         
     }
 ]

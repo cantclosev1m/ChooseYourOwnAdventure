@@ -14,6 +14,40 @@ import java.util.List;
  */
 public class App 
 {
+    /**
+     * Function for initializing new instance of game
+     */
+    public void startGame()
+    {
+        
+    }
+    
+    /** 
+     * Function responsible for ending game instance
+     */
+    public void endGame()
+    {
+        
+    }
+    
+    /**
+     * Function responsible for loading previous instance of game
+     */
+    public void loadGame()
+    {
+        
+    }
+    
+    /**
+     * Function responsible for saving game instance
+     */
+    public void saveGame()
+    {
+        
+    }
+    
+    
+    
     public static void main( String[] args ) throws Exception
     {
         File file = new File("game.json");
