@@ -1,0 +1,23 @@
+# Maven specific
+target/
+release/
+dependency-reduced-pom.xml
+.mvn/
+
+# Eclipse specific
+.classpath
+.project
+.settings/
+
+# IntelliJ specific
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# NetBeans specific
+nb-configuration.xml
+
+# Logs
+*.log
+
