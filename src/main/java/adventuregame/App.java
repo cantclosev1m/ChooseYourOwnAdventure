@@ -46,6 +46,14 @@ public class App
         
     }
     
+    /**
+     * Function for building and instance of the game menu
+     */
+    public void buildMenu()
+    {
+        
+    }
+    
     
     
     public static void main( String[] args ) throws Exception

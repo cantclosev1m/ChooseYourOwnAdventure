@@ -1,5 +1,6 @@
 [
     {
+        "isRoot": "TRUE",
         "Description": "You awake in a stupor, unaware of your surroundings. Fighting the throbbing pain in your head, you surmise that you are in some sort of dungeon. \nThere are three tunnels leading from the room, one to the left, right and center. Which way will you go?",
         "Choices": [
             {

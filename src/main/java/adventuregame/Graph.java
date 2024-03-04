@@ -31,7 +31,7 @@ public class Graph
      */
     public int nextChoice(int choice)
     {
-        return
+        return 0; //placeholder value
     }
     
 }
