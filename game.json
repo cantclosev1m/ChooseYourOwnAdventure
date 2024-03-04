@@ -1,0 +1,38 @@
+[
+    {
+        "Description": "You awake in a stupor, unaware of your surroundings. Fighting the throbbing pain in your head, you surmise that you are in some sort of dungeon. \nThere are three tunnels leading from the room, one to the left, right and center. Which way will you go?",
+        "Choices": [
+            {
+                "Choice_Description": "Left",
+                "Choice_link": 1
+            },
+            {
+                "Choice_Description": "Center",
+                "Choice_link": 2
+            },
+            {
+                "Choice_Description": "Right",
+                "Choice_link": 3
+            }
+        ],
+            
+    },
+    {
+        "Description": "Making your way down the left most tunnel, you stumble into a cavern that doesn't appear to have been man made. As your eyes adjust to the darkness, you make out a large, lumbering silhouette charging towards you.\nThe beast's stench can only mean one thing, an ogre. What will you do?",
+        "Choices": [
+            {
+                "Choice_Description": "Fight",
+                "Choice_link": 4
+            },
+            {
+                "Choice_Description": "Attempt to make peace",
+                "Choice_link": 5
+            },
+            {
+                "Choice_Description": "Run back down the tunnel",
+                "Choice_link": 6
+            }
+        ],
+        
+    }
+]
