@@ -1,5 +1,7 @@
 [
+
     {
+
         "isRoot": "TRUE",
         "Description": "You awake in a stupor, unaware of your surroundings. Fighting the throbbing pain in your head, you surmise that you are in some sort of dungeon. \nThere are three tunnels leading from the room, one to the left, right and center. Which way will you go?",
         "Choices": [
@@ -19,6 +21,7 @@
             
     },
     {
+
         "Description": "Making your way down the left most tunnel, you stumble into a cavern that doesn't appear to have been man made. As your eyes adjust to the darkness, you make out a large, lumbering silhouette charging towards you.\nThe beast's stench can only mean one thing, an ogre. What will you do?",
         "Choices": [
             {
@@ -35,5 +38,83 @@
             }
         ]
         
+    },
+    {
+        "Description": "Walking down the center tunnel, you stumble into a completely dark room. Your eyes strain to perceive what appears to be unlit torches hanging on the walls.\n You come to realize you are not alone, as the chirping and fluttering of bats begins to fill your ears. How do you react?",
+        "Choices": [
+            {
+                "Choice_Description": "Light the torches",
+                "Choice_link": 7
+            },
+            {
+                "Choice_Description": "Attack the bats",
+                "Choice link": 8
+            },
+            {
+                "Choice_Description": "Sneak through the room",
+                "Choice_link": 9
+            }
+        ]
+    },
+    {
+        "Description": "Choosing the right tunnel, you come to a circular chamber. Once within, you make out inane human ramblings coming from a haggard, bloodied adventurer.\nYou step closer to comfort him, yet his mutterings only grow more frenzied. What will you do?",
+        "Choices": [
+            {
+                "Choice_Description": "Talk to him in an attempt to calm him down",
+                "Choice_link": 10
+            },
+            {
+                "Choice_Description": "Take no chances, kill him",
+                "Choice_link": 11
+            },
+            {
+                "Choice_Description": "Ignore him and attempt to walk past him",
+                "Choice_link": 12
+            }
+        ]
+    },
+    {
+        "Description": "You throw down your longsword and kneel to the ground as the ogre charges you. Right as it is about to strike you down it pauses, confused at your gesture.\n Seeing that you don't intend to make yourself a threat, it lets you pass by unharmed. You pass through a small man-sized hole in the cavern into a large vault, with jewels and gold littered throughout the room.\nDespite the splendor of it all, an air of unease hangs over you. Something is not quite right. What will you do?",
+        "Choices": [
+            {
+                "Choice_Description": "Ignore the uneasy feeling, stuff as much loot as you can into your pack as it can hold",
+                "Choice_link": 13
+
+            },
+            {
+                "Choice_Description": "Survey the room for the source of uneasiness",
+                "Choice_link": 14
+            },
+            {
+                "Choice_Description": "Waste no time leaving the room",
+                "Choice_link": 15
+            }
+        ]
+    },
+    {
+        "Description": "As the ogre charges you, you draw your longsword and assume a defensive stance. Right as it is about to barrel into you, you sidestep to the left and swing at its throat. The beast falls over dead.\nYou pass through a small man-sized hole in the cavern into a large vault, with jewels and gold littered throughout the room. Despite the splendor of it all, an air of unease hangs over you. Something is not quite right. What will you do?",
+        "Choices": [
+            {
+                "Choice_Description": "Ignore the uneasy feeling, stuff as much loot as you can into your pack as it can hold",
+                "Choice_link": 13
+
+            },
+            {
+                "Choice_Description": "Survey the room for the source of uneasiness",
+                "Choice_link": 14
+            },
+            {
+                "Choice_Description": "Waste no time leaving the room",
+                "Choice_link": 15
+            }
+        ]
+    },
+    {
+        "Description": "Seeing the beast run towards you, you attempt to run back down the tunnel from where you came. As you're inches away from the small opening, you feel a large hand grasp you by your waist.\nThe ogre lifts you into the air and pummels you into the stone floor until you are nothing but red paste.",
+        "Choices": [
+
+        ]
+
+
     }
 ]
