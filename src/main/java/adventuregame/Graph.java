@@ -12,9 +12,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jdk.internal.net.http.common.Pair;
 
-import javax.swing.*;
-import adventuregame.MainMenu;
-
 /**
  * Class for graph includes, constructor and functions for graph
  */
@@ -121,21 +118,10 @@ public class Graph {
 
     public static void main(String[] args) {
         try {
-            // display main menu
-            java.awt.EventQueue.invokeLater(new Runnable() {
-                public void run() {
-                    MainMenu mm = new MainMenu();
-                    mm.createMM();
-                }
-            });
-            
             Graph myGraph = new Graph("game.json");
             myGraph.initialize();  
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
-        
     }
 }
