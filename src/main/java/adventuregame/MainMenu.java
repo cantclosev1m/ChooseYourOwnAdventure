@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class MainMenu {
+    // function responsible for building main menu
     public void createMM() {
         // Initialize variables
         JFrame mainWindow = new JFrame("The Labyrinth");
