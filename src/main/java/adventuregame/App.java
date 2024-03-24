@@ -1,5 +1,8 @@
 package adventuregame;
+import java.awt.*;
 import java.util.Map;
+
+import adventuregame.util.EventCallback;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.FileReader;
@@ -8,7 +11,7 @@ import java.util.List;
 
 
 import javax.swing.*;
-import adventuregame.MainMenu;
+import adventuregame.gui.MainMenu;
 import adventuregame.EventScreen;
 
 /**
@@ -20,6 +23,37 @@ public class App
     /**
      * Function for initializing new instance of game
      */
+
+    private static void setDefaultTheme() throws UnsupportedLookAndFeelException {
+
+        // Should be separated from App class, but oh well
+
+        UIManager.put("nimbusBase", new Color(255, 255, 255));
+        UIManager.put("nimbusBlueGrey", new Color(255, 255, 255));
+        UIManager.put("control", new Color(255, 255, 255));
+
+        UIManager.put("Button.background", Color.BLACK);
+        UIManager.put("Button.foreground", Color.WHITE);
+        UIManager.put("Button.border", BorderFactory.createLineBorder(Color.WHITE));
+
+        for (UIManager.LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+            if ("Nimbus".equals(info.getName())) {
+                try {
+                    UIManager.setLookAndFeel(info.getClassName());
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+                break;
+            }
+        }
+
+    }
+
+
     public void startGame()
     {
         
@@ -51,13 +85,23 @@ public class App
 
     public static void main( String[] args ) throws Exception
     {
-        // display main menu
+        setDefaultTheme();
+
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 
                 MainMenu mm = new MainMenu();
-                mm.createMM();
-                
+
+                mm.onActivate.Event().Connect(new EventCallback() {
+                    @Override
+                    public void onEvent(Object... args) {
+                        System.out.println("Main Menu Activated");
+                    }
+                });
+
+                mm.setActive();
+
                 /* for testing purposes 
                 EventScreen eScreen = new EventScreen();
                 eScreen.buildEventScreen();
