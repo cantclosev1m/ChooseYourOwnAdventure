@@ -6,8 +6,10 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -27,17 +29,20 @@ public class Graph {
      * Node class implementation
      * <<Subject to change>>
      */
-    public class Node {
-        private String description;
-        private ArrayList<Choice> choiceLinks;
+    public static class Node {
+        @JsonProperty("Description")
+        private String Description;
 
-        public Node(String description, ArrayList<Choice> choiceLinks) {
-            this.description = description;
-            this.choiceLinks = choiceLinks;
-        }
+        @JsonProperty("Choices")
+        private List<Choice> Choices;
 
         public String getDescription() {
-            return description;
+            return Description;
+        }
+
+        public List<Choice> getChoices()
+        {
+            return Choices;
         }
     }
 
@@ -92,11 +97,15 @@ public class Graph {
 
         for (Node n : nodeList) {
             ArrayList<Pair<Choice, Node>> graphConnections = new ArrayList<>();
-            for (Choice choice : n.choiceLinks) {
+            for (Choice choice : n.Choices) {
                 int index = choice.getChoiceLink();
+
                 if (index == -1) {
-                    // TODO: handle the terminating cases
+                    Pair<Choice, Node> choiceNodePair = new Pair<>(choice, null);
+                    graphConnections.add(choiceNodePair);
+                    continue;
                 }
+
                 Node nodeLink = nodeList.get(index);
                 Pair<Choice, Node> choiceNodePair = new Pair<>(choice, nodeLink);
                 graphConnections.add(choiceNodePair);

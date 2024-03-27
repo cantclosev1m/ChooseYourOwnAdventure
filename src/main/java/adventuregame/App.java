@@ -2,7 +2,6 @@ package adventuregame;
 import java.awt.*;
 import java.util.Map;
 
-import adventuregame.util.EventCallback;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.FileReader;
@@ -92,15 +91,14 @@ public class App
             public void run() {
                 
                 MainMenu mm = new MainMenu();
-
-                mm.onActivate.Event().Connect(new EventCallback() {
-                    @Override
-                    public void onEvent(Object... args) {
-                        System.out.println("Main Menu Activated");
-                    }
+                mm.onMenuInit.Connect((Void) -> {
+                    System.out.println("Hello from the menu");
+                });
+                mm.setActive();
+                mm.onGameStart.Connect((Void) -> {
+                    System.out.println("A new game has started");
                 });
 
-                mm.setActive();
 
                 /* for testing purposes 
                 EventScreen eScreen = new EventScreen();

@@ -1,10 +1,12 @@
 package adventuregame.gui;
 
 import adventuregame.util.BindableEvent;
-import adventuregame.util.EventConnection;
+import adventuregame.util.Event;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class MainMenu {
@@ -22,28 +24,24 @@ public class MainMenu {
     private JPanel buttonPanel;
     private GridBagConstraints gbc;
 
-    // Event Connections //
-    public BindableEvent onActivate = new BindableEvent();
-    public BindableEvent onGamePlay = new BindableEvent();
+    // Events
+    public Event<Void> onGameStart = new BindableEvent<>();
+    public Event<Void> onMenuInit = new BindableEvent<>();
 
-    private ArrayList<EventConnection> connectionList;
+    // Event Connections //
+
 
     public void setActive()
     {
         isActive = true;
         mainWindow.setVisible(true);
-        onActivate.Fire();
+        onMenuInit.Fire();
     }
 
     public void unActivate()
     {
         isActive = false;
         mainWindow.setVisible(false);
-
-        for(EventConnection conn : connectionList)
-        {
-            conn.Disconnect();
-        }
     }
 
 
@@ -95,6 +93,13 @@ public class MainMenu {
         buttonPanel.add(settingsB, gbc);
         gbc.gridy++;
         buttonPanel.add(quitB, gbc);
+
+        nGameB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                onGameStart.Fire();
+            }
+        });
 
         // Add the buttonPanel to the center of the mainWindow
         mainWindow.add(buttonPanel, BorderLayout.CENTER);

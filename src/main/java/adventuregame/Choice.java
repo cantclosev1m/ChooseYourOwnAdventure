@@ -1,20 +1,20 @@
 package adventuregame;
 
-public class Choice {
-    private String description;
-    private int choiceLink;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-    public Choice(String description, int choiceLink) {
-        this.description = description;
-        this.choiceLink = choiceLink;
-    }
+public class Choice {
+    @JsonProperty("Choice_Description")
+    private String Choice_Description;
+
+    @JsonProperty("Choice_link")
+    private int Choice_Link;
 
     public String getDescription() {
-        return description;
+        return Choice_Description;
     }
 
     public int getChoiceLink()
     {
-        return choiceLink;
+        return Choice_Link;
     }
 }
