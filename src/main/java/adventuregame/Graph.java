@@ -75,6 +75,11 @@ public class Graph {
         constructGraph();
     }
 
+    public Node getRoot()
+    {
+        return root;
+    }
+
     private String parseFile(File file) throws IOException {
         StringBuilder fileContents = new StringBuilder();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
@@ -100,6 +105,8 @@ public class Graph {
             for (Choice choice : n.Choices) {
                 int index = choice.getChoiceLink();
 
+
+
                 if (index == -1) {
                     Pair<Choice, Node> choiceNodePair = new Pair<>(choice, null);
                     graphConnections.add(choiceNodePair);
@@ -109,6 +116,8 @@ public class Graph {
                 Node nodeLink = nodeList.get(index);
                 Pair<Choice, Node> choiceNodePair = new Pair<>(choice, nodeLink);
                 graphConnections.add(choiceNodePair);
+
+                root = index == 0 ? nodeLink : null;
             }
             adjacencyList.put(n, graphConnections);
         }
