@@ -63,14 +63,35 @@ public class Game{
      * @param choiceIndex
      * @return
      */
-    public Graph.Node updateGraphNode(Graph gameGraph, Graph.Node currentNode, int choiceIndex)
+    public void updateGraphNode(Graph gameGraph, Graph.Node currentNode, int choiceIndex)
     {
         Graph.Node nextNode = gameGraph.nextNode(currentNode, choiceIndex);
         currentNode = nextNode;
-        return currentNode;
+
     }
     //TODO Implement function to check if game should be over.
     public void checkGameOver()
+    {
+
+    }
+
+
+    //TODO SaveGame Function
+
+    public void saveGame()
+    {
+
+    }
+
+
+    //TODO loadImage Function
+    public void loadImage (Graph.Node currentnode)
+    {
+        //Implementation depends on how we store images
+    }
+
+    //TODO loadGame Function
+    public void loadGame()
     {
 
     }
