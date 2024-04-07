@@ -1,9 +1,6 @@
 package adventuregame;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -29,7 +26,7 @@ public class Graph {
      * Node class implementation
      * <<Subject to change>>
      */
-    public static class Node {
+    public static class Node implements Serializable {
         @JsonProperty("Description")
         private String Description;
 
@@ -44,6 +41,26 @@ public class Graph {
         {
             return Choices;
         }
+
+        @Override
+        public boolean equals(Object obj) {
+            if(this == obj) return true;
+            if(obj == null || getClass() != obj.getClass()) return false;
+            Node node = (Node) obj;
+
+            boolean choicesEqual = true;
+
+            for(int i=0; i < Choices.toArray().length; i++)
+            {
+                choicesEqual = choicesEqual && Choices.get(i).equals(node.getChoices().get(i));
+            }
+            return node.getDescription().equals(Description) && choicesEqual;
+        }
+
+        @Override
+        public int hashCode() {
+            return super.hashCode();
+        }
     }
 
     /**
@@ -52,6 +69,18 @@ public class Graph {
     public Graph(String jsonFilePath) throws IOException {
         this.jsonFilePath = jsonFilePath;
         initialize();
+    }
+
+    public Node getNodeFromReference(Node savedNode)
+    {
+        for(Node n : nodeList)
+        {
+            if (n.equals(savedNode))
+            {
+                return n;
+            }
+        }
+        return null;
     }
 
     public ArrayList<Node> getNodeList() {
@@ -104,8 +133,6 @@ public class Graph {
             ArrayList<Pair<Choice, Node>> graphConnections = new ArrayList<>();
             for (Choice choice : n.Choices) {
                 int index = choice.getChoiceLink();
-
-
 
                 if (index == -1) {
                     Pair<Choice, Node> choiceNodePair = new Pair<>(choice, null);

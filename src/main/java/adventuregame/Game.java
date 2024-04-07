@@ -12,18 +12,54 @@ import java.util.function.Consumer;
 
 public class Game{
 
+    public interface onGameEndEvent
+    {
+        Graph.Node getSavedNode();
+    }
+
     private Graph gameGraph;
     private GameMenu gameMenu;
     private Graph.Node currentNode;
-    private String saveFile = "SaveData.txt";
 
-    public Event<Void> onGameEnd = new BindableEvent<>();
+    public Event<onGameEndEvent> onGameEnd = new BindableEvent<onGameEndEvent>();
     public Consumer<GameMenu.GameButtonClickEvent> buttonClickListener;
 
     public Game() throws IOException {
         gameGraph = new Graph("game.json");
         gameMenu = new GameMenu();
-        Initialize();
+
+        gameGraph.initialize();
+        currentNode = gameGraph.getRoot();
+        setMenuInterface();
+        gameMenu.setVisibility(true);
+        updateGameState();
+        initConnections();
+    }
+
+    public Game(String saveDataFile)
+    {
+        try{
+            FileInputStream fis = new FileInputStream(saveDataFile);
+            ObjectInputStream ois = new ObjectInputStream(fis);
+            Graph.Node currentNodeReference = (Graph.Node) ois.readObject();
+            ois.close();
+            fis.close();
+
+            gameGraph = new Graph("game.json");
+            gameMenu = new GameMenu();
+            gameGraph.initialize();
+
+            currentNode  = gameGraph.getNodeFromReference(currentNodeReference);
+
+            setMenuInterface();
+            gameMenu.setVisibility(true);
+            updateGameState();
+            initConnections();
+        }
+        catch (IOException | ClassNotFoundException e)
+        {
+            System.err.println("Error loading the game" + e.getMessage());
+        }
     }
 
     private void initConnections()
@@ -36,6 +72,15 @@ public class Game{
             }
         };
         gameMenu.onGameButtonClick.Connect(buttonClickListener);
+        gameMenu.onGameSave.Connect((Void) -> {
+            onGameEnd.Fire(new onGameEndEvent() {
+                @Override
+                public Graph.Node getSavedNode() {
+                    return currentNode;
+                }
+            });
+        });
+
     }
 
     private void setMenuInterface()
@@ -49,15 +94,6 @@ public class Game{
 
         gameMenu.massSetButtonListDesc(choiceDescriptions);
         gameMenu.setEventDescription(currentNode.getDescription());
-    }
-
-    private void Initialize() throws IOException {
-        gameGraph.initialize();
-        currentNode = gameGraph.getRoot();
-        setMenuInterface();
-        gameMenu.setVisibility(true);
-        updateGameState();
-        initConnections();
     }
 
     /**
@@ -97,20 +133,6 @@ public class Game{
     }
 
 
-    //TODO SaveGame Function
-
-    public void saveGame()
-    {
-        try
-        {
-            FileOutputStream fos = new FileOutputStream(saveFile);
-            ObjectOutputStream oos = new ObjectOutputStream(fos);
-            oos.writeObject(currentNode);
-        }
-        catch (IOException e){
-            System.err.println("Error saving the game" + e.getMessage());
-        }
-    }
 
 
     //TODO loadImage Function
@@ -119,21 +141,4 @@ public class Game{
         //Implementation depends on how we store images
     }
 
-    //TODO loadGame Function
-    public void loadGame()
-    {
-       try{
-           FileInputStream fis = new FileInputStream(saveFile);
-           ObjectInputStream ois = new ObjectInputStream(fis);
-           ois.close();
-           fis.close();
-           currentNode = (Graph.Node) ois.readObject();
-           gameGraph.initialize();
-
-       }
-       catch (IOException | ClassNotFoundException e)
-       {
-           System.err.println("Error loading the game" + e.getMessage());
-       }
-    }
 }

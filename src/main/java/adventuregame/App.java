@@ -1,6 +1,8 @@
 package adventuregame;
 import java.awt.*;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 
 import javax.swing.*;
@@ -15,6 +17,8 @@ public class App
     /**
      * Function for initializing new instance of game
      */
+
+    private String saveFile = "saveFile.txt";
 
     private static void setDefaultTheme() throws UnsupportedLookAndFeelException {
 
@@ -48,6 +52,9 @@ public class App
 
     public void startGame() throws IOException {
         Game game = new Game();
+        game.onGameEnd.Connect(onGameEndEvent -> {
+            saveGame(onGameEndEvent.getSavedNode());
+        });
     }
 
     /**
@@ -61,17 +68,27 @@ public class App
     /**
      * Function responsible for loading previous instance of game
      */
-    public void loadGame()
-    {
-
+    public void loadGame() throws IOException {
+        Game game = new Game(saveFile);
+        game.onGameEnd.Connect(onGameEndEvent -> {
+            saveGame(onGameEndEvent.getSavedNode());
+        });
     }
 
     /**
      * Function responsible for saving game instance
      */
-    public void saveGame()
+    public void saveGame(Graph.Node savedNode)
     {
-
+        try
+        {
+            FileOutputStream fos = new FileOutputStream(saveFile);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(savedNode);
+        }
+        catch (IOException e){
+            System.err.println("Error saving the game" + e.getMessage());
+        }
     }
 
     public static void main( String[] args ) throws Exception
@@ -96,6 +113,16 @@ public class App
                     mm.unActivate();
                     try {
                         application.startGame();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+
+                mm.onGameLoad.Connect((Void) -> {
+                    System.out.println("A new game has been loaded");
+                    mm.unActivate();
+                    try {
+                        application.loadGame();
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }

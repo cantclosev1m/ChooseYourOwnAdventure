@@ -37,6 +37,8 @@ public class GameMenu extends JFrame {
 
     private List<JButton> gameButtonList = new ArrayList<>();
     public Event<GameButtonClickEvent> onGameButtonClick = new BindableEvent<GameButtonClickEvent>();
+    public Event<Void> onGameSave = new BindableEvent<>();
+
 
     public GameMenu()
     {
@@ -106,6 +108,13 @@ public class GameMenu extends JFrame {
         buttonPanel2.add(inventoryB);
 
         rightPanel.add(buttonPanel2, BorderLayout.NORTH);
+
+        saveB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                onGameSave.Fire();
+            }
+        });
 
         // adding panels to screen
         add(leftPanel, BorderLayout.WEST);

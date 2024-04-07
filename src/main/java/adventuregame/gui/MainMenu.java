@@ -27,6 +27,8 @@ public class MainMenu {
     // Events
     public Event<Void> onGameStart = new BindableEvent<>();
     public Event<Void> onMenuInit = new BindableEvent<>();
+    public Event<Void> onGameLoad = new BindableEvent<>();
+
 
     // Event Connections //
 
@@ -98,6 +100,13 @@ public class MainMenu {
             @Override
             public void actionPerformed(ActionEvent e) {
                 onGameStart.Fire();
+            }
+        });
+
+        lGameB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                onGameLoad.Fire();
             }
         });
 
