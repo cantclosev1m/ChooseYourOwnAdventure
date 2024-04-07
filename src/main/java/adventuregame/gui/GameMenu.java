@@ -1,11 +1,23 @@
 package adventuregame.gui;
 
+import adventuregame.util.BindableEvent;
+import adventuregame.util.Event;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GameMenu extends JFrame {
+
+    public interface GameButtonClickEvent
+    {
+        int buttonNumber = 0;
+        int getButtonNumber();
+    }
 
     private JPanel leftPanel;
     private JPanel middlePanel;
@@ -22,6 +34,9 @@ public class GameMenu extends JFrame {
     private JButton saveB;
     private JButton inventoryB;
     private JPanel buttonPanel2;
+
+    private List<JButton> gameButtonList = new ArrayList<>();
+    public Event<GameButtonClickEvent> onGameButtonClick = new BindableEvent<GameButtonClickEvent>();
 
     public GameMenu()
     {
@@ -42,14 +57,35 @@ public class GameMenu extends JFrame {
         leftPanel.add(leftLabel, BorderLayout.CENTER);
 
         // middle portion
-        topTextLabel = new JLabel("Event info text...", SwingConstants.CENTER);
-        middlePanel.add(topTextLabel, BorderLayout.NORTH);
+        topTextLabel = new JLabel("<html>Event info text...", SwingConstants.CENTER);
+        middlePanel.add(topTextLabel, BorderLayout.CENTER);
 
         bottomPanel = new JPanel(new GridLayout(3, 1)); // for stacking buttons
 
         choice1B = new JButton("Choice 1");
         choice2B = new JButton("Choice 2");
         choice3B = new JButton("Choice 3");
+
+        gameButtonList.add(0, choice1B);
+        gameButtonList.add(1, choice2B);
+        gameButtonList.add(2, choice3B);
+
+        for(int i=0; i < 3; i++)
+        {
+            int finalI = i;
+            gameButtonList.get(i).addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    onGameButtonClick.Fire(new GameButtonClickEvent() {
+                        @Override
+                        public int getButtonNumber() {
+                            return finalI;
+                        }
+                    });
+                }
+            });
+        }
+
         Dimension buttonSize = new Dimension(150, 50);
 
         choice1B.setPreferredSize(buttonSize);
@@ -93,6 +129,8 @@ public class GameMenu extends JFrame {
 
     public void setEventDescription(String description)
     {
-        topTextLabel.setText(description);
+        topTextLabel.setText("<html>" + description);
     }
+
+
 }

@@ -5,15 +5,15 @@
         "Choices": [
             {
                 "Choice_Description": "Left",
-                "Choice_link": 0
+                "Choice_link": 1
             },
             {
                 "Choice_Description": "Center",
-                "Choice_link": 0
+                "Choice_link": 2
             },
             {
                 "Choice_Description": "Right",
-                "Choice_link": 0
+                "Choice_link": 3
             }
         ]
 

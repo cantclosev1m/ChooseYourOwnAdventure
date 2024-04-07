@@ -5,8 +5,8 @@ import adventuregame.util.BindableEvent;
 import adventuregame.util.Event;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class Game{
 
@@ -15,11 +15,24 @@ public class Game{
     private Graph.Node currentNode;
 
     public Event<Void> onGameEnd = new BindableEvent<>();
+    public Consumer<GameMenu.GameButtonClickEvent> buttonClickListener;
 
     public Game() throws IOException {
         gameGraph = new Graph("game.json");
         gameMenu = new GameMenu();
         Initialize();
+    }
+
+    private void initConnections()
+    {
+        buttonClickListener = new Consumer<GameMenu.GameButtonClickEvent>() {
+            @Override
+            public void accept(GameMenu.GameButtonClickEvent gameButtonClickEvent) {
+                updateGraphNode(gameButtonClickEvent.getButtonNumber());
+                setMenuInterface();
+            }
+        };
+        gameMenu.onGameButtonClick.Connect(buttonClickListener);
     }
 
     private void setMenuInterface()
@@ -40,6 +53,8 @@ public class Game{
         currentNode = gameGraph.getRoot();
         setMenuInterface();
         gameMenu.setVisibility(true);
+        updateGameState();
+        initConnections();
     }
 
     /**
@@ -55,19 +70,22 @@ public class Game{
         return gameGraph.nextNode(currentNode, choiceIndex).getDescription();
     }
 
+
+    public void updateGameState()
+    {
+
+    }
+
     /**
      * updateGraphNode
      * Function to update game position (will need alterations to account for UI implementation)
-     * @param gameGraph
-     * @param currentNode
      * @param choiceIndex
      * @return
      */
-    public void updateGraphNode(Graph gameGraph, Graph.Node currentNode, int choiceIndex)
+    public void updateGraphNode(int choiceIndex)
     {
         Graph.Node nextNode = gameGraph.nextNode(currentNode, choiceIndex);
         currentNode = nextNode;
-
     }
     //TODO Implement function to check if game should be over.
     public void checkGameOver()
