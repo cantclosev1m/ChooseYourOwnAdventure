@@ -4,6 +4,8 @@ import adventuregame.gui.GameMenu;
 import adventuregame.util.BindableEvent;
 import adventuregame.util.Event;
 
+import java.io.*;
+
 import java.io.IOException;
 import java.util.List;
 import java.util.function.Consumer;
@@ -13,6 +15,7 @@ public class Game{
     private Graph gameGraph;
     private GameMenu gameMenu;
     private Graph.Node currentNode;
+    private String saveFile = "SaveData.txt";
 
     public Event<Void> onGameEnd = new BindableEvent<>();
     public Consumer<GameMenu.GameButtonClickEvent> buttonClickListener;
@@ -98,7 +101,15 @@ public class Game{
 
     public void saveGame()
     {
-
+        try
+        {
+            FileOutputStream fos = new FileOutputStream(saveFile);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(currentNode);
+        }
+        catch (IOException e){
+            System.err.println("Error saving the game" + e.getMessage());
+        }
     }
 
 
@@ -111,6 +122,18 @@ public class Game{
     //TODO loadGame Function
     public void loadGame()
     {
+       try{
+           FileInputStream fis = new FileInputStream(saveFile);
+           ObjectInputStream ois = new ObjectInputStream(fis);
+           ois.close();
+           fis.close();
+           currentNode = (Graph.Node) ois.readObject();
+           gameGraph.initialize();
 
+       }
+       catch (IOException | ClassNotFoundException e)
+       {
+           System.err.println("Error loading the game" + e.getMessage());
+       }
     }
 }
