@@ -33,6 +33,9 @@ public class Graph {
         @JsonProperty("Choices")
         private List<Choice> Choices;
 
+        @JsonProperty("Image_Path")
+        private String Image_Path;
+
         public String getDescription() {
             return Description;
         }
@@ -40,6 +43,11 @@ public class Graph {
         public List<Choice> getChoices()
         {
             return Choices;
+        }
+
+        public String getImagePath()
+        {
+            return Image_Path;
         }
 
         @Override
@@ -131,6 +139,7 @@ public class Graph {
 
         for (Node n : nodeList) {
             ArrayList<Pair<Choice, Node>> graphConnections = new ArrayList<>();
+            System.out.println(n.getImagePath());
             for (Choice choice : n.Choices) {
                 int index = choice.getChoiceLink();
 

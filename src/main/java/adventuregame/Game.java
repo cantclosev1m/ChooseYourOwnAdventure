@@ -94,6 +94,7 @@ public class Game{
 
         gameMenu.massSetButtonListDesc(choiceDescriptions);
         gameMenu.setEventDescription(currentNode.getDescription());
+        loadImage(currentNode);
     }
 
     /**
@@ -135,10 +136,14 @@ public class Game{
 
 
 
-    //TODO loadImage Function
-    public void loadImage (Graph.Node currentnode)
-    {
-        //Implementation depends on how we store images
+
+    public void loadImage(Graph.Node currentNode) {
+        String imagePath = currentNode.getImagePath();
+        if (imagePath != null && !imagePath.isEmpty()) {
+            gameMenu.setImage(imagePath);
+        } else {
+            gameMenu.setImage(null);
+        }
     }
 
 }
