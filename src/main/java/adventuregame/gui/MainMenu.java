@@ -32,7 +32,7 @@ public class MainMenu {
 
     // Event Connections //
 
-
+//checking something//
     public void setActive()
     {
         isActive = true;
