@@ -32,7 +32,6 @@ public class MainMenu {
 
     // Event Connections //
 
-
     public void setActive()
     {
         isActive = true;
