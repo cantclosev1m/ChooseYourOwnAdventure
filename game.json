@@ -34,7 +34,7 @@
             },
             {
                 "Choice_Description": "Run back down the tunnel",
-                "Choice_link": 0
+                "Choice_link": 6
             }
         ]
         
@@ -45,15 +45,15 @@
         "Choices": [
             {
                 "Choice_Description": "Light the torches",
-                "Choice_link": 0
+                "Choice_link": 7
             },
             {
                 "Choice_Description": "Attack the bats",
-                "Choice_link": 0
+                "Choice_link": 8
             },
             {
                 "Choice_Description": "Sneak through the room",
-                "Choice_link": 0
+                "Choice_link": 9
             }
         ]
     },
@@ -63,15 +63,15 @@
         "Choices": [
             {
                 "Choice_Description": "Talk to him in an attempt to calm him down",
-                "Choice_link": 0
+                "Choice_link": 10
             },
             {
                 "Choice_Description": "Take no chances, kill him",
-                "Choice_link": 0
+                "Choice_link": 11
             },
             {
                 "Choice_Description": "Ignore him and attempt to walk past him",
-                "Choice_link": 0
+                "Choice_link": 12
             }
         ]
     },
@@ -96,7 +96,7 @@
     },
     {
         "Description": "As the ogre charges you, you draw your longsword and assume a defensive stance. Right as it is about to barrel into you, you sidestep to the left and swing at its throat. The beast falls over dead.\nYou pass through a small man-sized hole in the cavern into a large vault, with jewels and gold littered throughout the room. Despite the splendor of it all, an air of unease hangs over you. Something is not quite right. What will you do?",
-        "Image_Path": "Images\\Ogre.png",
+        "Image_Path": "Images\\Ogre_charging.png",
         "Choices": [
             {
                 "Choice_Description": "Ignore the uneasy feeling, stuff as much loot as you can into your pack as it can hold",
@@ -112,6 +112,137 @@
                 "Choice_link": 0
             }
         ]
+    },
+    {
+        "Description": "You attempt to run back down the tunnel you came from. Right as you reach the opening, you feel a large hand grip your waist. The ogre picks you up and slams you into the ground repeatedly, until the only thing that remains of you is red paste.",
+        "Image_Path": "Image\\Ogre_death.png",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "You take a matchbox from your pack, lighting the nearby torches. The bats begin to stir angrily until the flames scare them away. You make your way out of the room",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            }
+        ]
+
+
+    },
+    {
+    "Description": "You creep across the room, taking great care not disturb the sleeping bats. You run your hands along the wall until you find a door. Swinging it open, you quickly pass through and slam it shut. Once out, you hear the angry whir of the bats behind the door",
+    "Image_Path": "",
+    "Choices": [
+    {
+        "Choice_Description":"",
+        "Choice_link": 0
+    },
+    {
+        "Choice_Description":"",
+        "Choice_link": 0
+    },
+    {
+        "Choice_Description":"",
+        "Choice_link": 0
     }
+    ]
+
+    },
+    {
+        "Description": "You unsheathe your sword, swinging wildly at the bats resting above you. Many are sliced and crushed beneath your blade, but their kin begin to swarm and bite you, until you are overtaken by the mass of screeching black beasts",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "You calmly approach the man, gesturing that you mean no harm. You inquire about how he got here, yet all he says is, 'Don't let them take me.' As you get closer, his eyes widen in fear. 'DEMON! DEMON!' he screams. Before you can calm him down, he draws a knife and slashes his own throat.",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            }
+        ]
+    },
+    {
+        "Description": "You take a look at the murmuring mess before you and decide it's best not to take chances. You draw your sword and put the man out of his misery with a quick thrust into his chest. You make your way out of the room, leaving his body from whence you came.",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description": "",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description": "",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description": "",
+                "Choice_link": 0
+            }
+        ]
+    },
+    {
+        "Description": "You do your best to not draw the crazy man's attention as you slowly walk across the room. Right as you make it to the exit, you hear him scream 'DEMON!' as he pounces on your back with dagger in hand. The blade slides into your neck, and you bleed out on the cold stone floor.",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
+    }
+
+
 
 ]
