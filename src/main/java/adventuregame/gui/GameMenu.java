@@ -145,7 +145,7 @@ public class GameMenu extends JFrame {
     public void setImage (String imagePath)
     {
         ImageIcon imageIcon = new ImageIcon(imagePath);
-        Image image = imageIcon.getImage().getScaledInstance(500, 500, Image.SCALE_SMOOTH);
+        Image image = imageIcon.getImage().getScaledInstance(450, 800, Image.SCALE_SMOOTH);
         leftLabel.setIcon(new ImageIcon(image));
     }
 
