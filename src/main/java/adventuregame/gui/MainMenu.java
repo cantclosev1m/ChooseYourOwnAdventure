@@ -65,7 +65,7 @@ public class MainMenu {
        
         
         mainWindow.setLayout(new BorderLayout());
-        titleLabel.setFont(new Font("Book Antiqua", Font.BOLD, 24));
+        titleLabel.setFont(new Font("Book Antiqua", Font.BOLD, 32));
         titleLabel.setForeground(Color.WHITE);//changed text to white
         titleLabel.setBorder(BorderFactory.createEmptyBorder(35, 0, 0, 0)); // Spacer between title and top of window
         mainWindow.add(titleLabel, BorderLayout.NORTH);
