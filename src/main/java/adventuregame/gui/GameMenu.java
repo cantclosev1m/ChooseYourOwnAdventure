@@ -54,7 +54,7 @@ public class GameMenu extends JFrame {
         rightPanel = new JPanel(new BorderLayout());
 
         // left portion
-        leftLabel = new JLabel("Left Section");
+        leftLabel = new JLabel("       "); // for some space between image and event text
         leftLabel.setHorizontalAlignment(JLabel.CENTER);
         leftPanel.add(leftLabel, BorderLayout.CENTER);
 
@@ -87,13 +87,13 @@ public class GameMenu extends JFrame {
                 }
             });
         }
-
+        
         Dimension buttonSize = new Dimension(150, 50);
-
+        
         choice1B.setPreferredSize(buttonSize);
         choice2B.setPreferredSize(buttonSize);
         choice3B.setPreferredSize(buttonSize);
-
+        
         bottomPanel.add(choice1B);
         bottomPanel.add(choice2B);
         bottomPanel.add(choice3B);
@@ -130,7 +130,7 @@ public class GameMenu extends JFrame {
     public void massSetButtonListDesc(String[] buttonDescriptions)
     {
         assert (buttonDescriptions.length == 3) : "Description list must be of length 3";
-
+        
         choice1B.setText(buttonDescriptions[0]);
         choice2B.setText(buttonDescriptions[1]);
         choice3B.setText(buttonDescriptions[2]);
