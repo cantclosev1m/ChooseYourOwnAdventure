@@ -61,13 +61,17 @@ public class MainMenu {
         gbc = new GridBagConstraints();
 
         // Set up main screen
+        
+       
+        
         mainWindow.setLayout(new BorderLayout());
-        titleLabel.setFont(new Font("Arial", Font.PLAIN, 24));
+        titleLabel.setFont(new Font("Book Antiqua", Font.BOLD, 32));
+        titleLabel.setForeground(Color.WHITE);//changed text to white
         titleLabel.setBorder(BorderFactory.createEmptyBorder(35, 0, 0, 0)); // Spacer between title and top of window
         mainWindow.add(titleLabel, BorderLayout.NORTH);
         mainWindow.setSize(800, 600);
         mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        mainWindow.getContentPane().setBackground(Color.BLACK);//changed (some background to black)
         // Make window non-resizable
         mainWindow.setResizable(false);
 
