@@ -81,12 +81,12 @@
         "Choices": [
             {
                 "Choice_Description": "Ignore the uneasy feeling, stuff as much loot as you can into your pack as it can hold",
-                "Choice_link": 0
+                "Choice_link": 13
 
             },
             {
                 "Choice_Description": "Survey the room for the source of uneasiness",
-                "Choice_link": 0
+                "Choice_link": 14
             },
             {
                 "Choice_Description": "Waste no time leaving the room",
@@ -100,12 +100,12 @@
         "Choices": [
             {
                 "Choice_Description": "Ignore the uneasy feeling, stuff as much loot as you can into your pack as it can hold",
-                "Choice_link": 0
+                "Choice_link": 13
 
             },
             {
                 "Choice_Description": "Survey the room for the source of uneasiness",
-                "Choice_link": 0
+                "Choice_link": 14
             },
             {
                 "Choice_Description": "Waste no time leaving the room",
@@ -132,8 +132,8 @@
         ]
     },
     {
-        "Description": "You take a matchbox from your pack, lighting the nearby torches. The bats begin to stir angrily until the flames scare them away. You make your way out of the room",
-        "Image_Path": "",
+        "Description": "You take a matchbox from your pack, lighting the nearby torches. The bats begin to stir angrily until the flames scare them away. You make your way out of the room. The frightened bats from where you came from seem preferable to the sight you are now subjected to. In front of you is some sort of altar. Beside the altar are various effigies of some dark god in the form of a bat. Laying atop the altar is a cruel-looking blood-stained dagger. You feel a strange force summoning you towards the altar.",
+        "Image_Path": "Images\\Fantasy_altar.png",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -152,8 +152,8 @@
 
     },
     {
-    "Description": "You creep across the room, taking great care not disturb the sleeping bats. You run your hands along the wall until you find a door. Swinging it open, you quickly pass through and slam it shut. Once out, you hear the angry whir of the bats behind the door",
-    "Image_Path": "",
+    "Description": "You creep across the room, taking great care not disturb the sleeping bats. You run your hands along the wall until you find a door. Swinging it open, you quickly pass through and slam it shut. Once out, you hear the angry whir of the bats behind the door. The enraged bats from where you came from seem preferable to the sight you are now subjected to. In front of you is some sort of altar. Beside the altar are various effigies of some dark god in the form of a bat. Laying atop the altar is a cruel-looking blood-stained dagger. You feel a strange force summoning you towards the altar.",
+    "Image_Path": "Images\\Fantasy_altar.png",
     "Choices": [
     {
         "Choice_Description":"",
@@ -172,7 +172,7 @@
     },
     {
         "Description": "You unsheathe your sword, swinging wildly at the bats resting above you. Many are sliced and crushed beneath your blade, but their kin begin to swarm and bite you, until you are overtaken by the mass of screeching black beasts",
-        "Image_Path": "",
+        "Image_Path": "Images\\bats_attacking.png",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -241,8 +241,60 @@
                 "Choice_link": -1
             }
         ]
+    },
+    {
+        "Description": "You start gathering all of the various trinkets and jewels into your pack, yet your pack never seems to fill up. After what could have been hours of collecting, you see a tall, pale figure adorned in purple silk robes. You spot a ruby encrusted crown resting upon the figure's sheet-white, misshapen skull. This must be the owner of the treasure you have helped yourself to. The figure's countenance suggests it is not at all pleased with your transgression",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            }
+        ]
+    },
+    {
+        "Description": "You look around the gaudy room. Amidst all of the jewels, gem-encrusted goblets, and diamond chainmail, you make out a tall pale figure watching you intently. The figure appears to be a man, or more precisely, appears to have been a man. He is clothed in purple robes that suggest royalty, and he is wearing a ruby encrusted crown atop the over-stretched sickly pale skin on his skull. He begins to make his way towards you.",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            }
+        ]
+    },
+    {
+        "Description": "Despite all of the potential loot, you decide it's not worth the risk to stay in the room. You cross across the room, the gold and jewels crunching under your boots. You come to a set of double doors, yet they don't budge when you attempt to pull them open. You feel eyes glaring into the back of your head, as you turn around and see a ghostly white emaciated figure behind you.",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            }
+        ]
     }
-
-
 
 ]
