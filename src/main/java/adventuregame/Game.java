@@ -1,5 +1,6 @@
 package adventuregame;
 import adventuregame.Graph;
+import adventuregame.gui.EndingMenu;
 import adventuregame.gui.GameMenu;
 import adventuregame.util.BindableEvent;
 import adventuregame.util.Event;
@@ -10,6 +11,8 @@ import java.io.IOException;
 import java.util.List;
 import java.util.function.Consumer;
 
+import java.awt.Point;
+
 public class Game{
 
     public interface onGameEndEvent
@@ -19,6 +22,7 @@ public class Game{
 
     private Graph gameGraph;
     private GameMenu gameMenu;
+    private EndingMenu endMenu;
     private Graph.Node currentNode;
 
     public Event<onGameEndEvent> onGameEnd = new BindableEvent<onGameEndEvent>();
@@ -27,7 +31,7 @@ public class Game{
     public Game() throws IOException {
         gameGraph = new Graph("game.json");
         gameMenu = new GameMenu();
-
+        
         gameGraph.initialize();
         currentNode = gameGraph.getRoot();
         setMenuInterface();
@@ -86,6 +90,7 @@ public class Game{
     private void setMenuInterface()
     {
         // Updates the Menu looks based on the current node
+        if(currentNode == null) { return; } // stop updating choices if end node is reached
         List<Choice> choices = currentNode.getChoices();
         String[] choiceDescriptions = new String[3];
 
@@ -126,16 +131,25 @@ public class Game{
     {
         Graph.Node nextNode = gameGraph.nextNode(currentNode, choiceIndex);
         currentNode = nextNode;
+        checkGameOver(currentNode);
     }
-    //TODO Implement function to check if game should be over.
-    public void checkGameOver()
+    /**
+     * checkGameOver
+     * Function to check if game is completed
+     * @param n
+     * @return
+     */
+    public void checkGameOver(Graph.Node n)
     {
-
+        // check if node is null (no more node links)
+        if(n == null)
+        {
+            endMenu = new EndingMenu();
+            Point location = gameMenu.getLocation(); // make window appear at same location as game menu
+            endMenu.setVisibility(true, location);
+            gameMenu.setVisibility(false);
+        }
     }
-
-
-
-
 
     public void loadImage(Graph.Node currentNode) {
         String imagePath = currentNode.getImagePath();
@@ -145,5 +159,4 @@ public class Game{
             gameMenu.setImage(null);
         }
     }
-
 }
