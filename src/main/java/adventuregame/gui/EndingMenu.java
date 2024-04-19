@@ -1,65 +1,152 @@
 package adventuregame.gui;
 
+import adventuregame.Graph;
+import adventuregame.util.BindableEvent;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class EndingMenu extends JComponent {
-    private JPanel panel;
-    private JLabel endgameLabel;
-    private JButton mmButton; // mm = main menu
-    private JButton exitButton;
+    private JPanel leftPanel;
+    private JPanel middlePanel;
+    private JPanel rightPanel;
+    private JPanel bottomPanel;
 
-    public EndingMenu() {
-        // organization
+    private JLabel leftLabel;
+    private JLabel topTextLabel;
+
+    private JButton mainMenuB;
+    private JButton playAgainB;
+    private JButton quitB;
+
+    private JButton saveB;
+    private JButton inventoryB;
+    private JPanel buttonPanel2;
+    
+    private java.util.List<JButton> gameButtonList = new ArrayList<>();
+    public adventuregame.util.Event<GameMenu.GameButtonClickEvent> onGameButtonClick = new BindableEvent<GameMenu.GameButtonClickEvent>();
+    public adventuregame.util.Event<Void> onGameSave = new BindableEvent<>();
+    
+    public EndingMenu(Graph.Node endNode) {
         setSize(800, 600);
         setLayout(new BorderLayout());
-        panel = new JPanel(new GridBagLayout()); 
 
-        GridBagConstraints gbc = new GridBagConstraints();
-        gbc.gridx = 0;
-        gbc.gridy = 0;
-        gbc.insets = new Insets(20, 0, 20, 0); // vertical spacer
-        gbc.anchor = GridBagConstraints.CENTER;
+        // set up event screen layout
+        leftPanel = new JPanel(new BorderLayout());
+        middlePanel = new JPanel(new BorderLayout());
+        rightPanel = new JPanel(new BorderLayout());
 
-        endgameLabel = new JLabel("<html>Game Over<br>This should be updated based on if the player won or not.<br>Maybe have a custom message based on what happens</html>");
-        endgameLabel.setFont(new Font("Arial", Font.BOLD, 20));
+        // left portion
+        leftLabel = new JLabel("       "); // for some space between image and event text
+        leftLabel.setHorizontalAlignment(JLabel.CENTER);
+        leftPanel.add(leftLabel, BorderLayout.CENTER);
+
+        // middle portion
+        topTextLabel = new JLabel("<html>" + endNode.getDescription(), SwingConstants.CENTER);
+        middlePanel.add(topTextLabel, BorderLayout.CENTER);
+
+        bottomPanel = new JPanel(new GridLayout(3, 1)); // for stacking buttons
+
+        mainMenuB = new JButton("Go to Main Menu");
+        playAgainB = new JButton("Play again");
+        quitB = new JButton("Quit");
         
-        // end game button
-        exitButton = new JButton("Exit");
-        exitButton.addActionListener(new ActionListener() {
+        // set button actions
+        mainMenuB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+                // stuff
+            }
+        });
+        playAgainB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // stuff
+            }
+        });
+        quitB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // stuff
             }
         });
         
-        // go back to main menu button
-        mmButton = new JButton("Main Menu");
-        mmButton.addActionListener(new ActionListener() {
+        gameButtonList.add(0, mainMenuB);
+        gameButtonList.add(1, playAgainB);
+        gameButtonList.add(2, quitB);
+
+        Dimension buttonSize = new Dimension(150, 50);
+
+        for(int i=0; i < 3; i++)
+        {
+            JButton button = gameButtonList.get(i);
+            button.setPreferredSize(buttonSize);
+            bottomPanel.add(button);
+        }
+
+        middlePanel.add(bottomPanel, BorderLayout.SOUTH); // center bottom of middle section
+
+        // right portion
+        saveB = new JButton("Save (and quit)");
+        inventoryB = new JButton("Inventory"); // Add an extra button for demonstration
+
+        buttonPanel2 = new JPanel(new GridLayout(2, 1, 5, 5));
+        buttonPanel2.add(saveB);
+        buttonPanel2.add(inventoryB);
+
+        rightPanel.add(buttonPanel2, BorderLayout.NORTH);
+
+        saveB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //
+                onGameSave.Fire();
             }
         });
         
-        // more organization
-        panel.add(endgameLabel, gbc);
-        gbc.gridy++;
-        panel.add(mmButton, gbc);
-        gbc.gridy++;
-        panel.add(exitButton, gbc);
-        add(panel, BorderLayout.CENTER);
-    }
-
-    public void setVisibility(boolean b) {
-       // setLocation(coord); // make new window in the same location as game menu screen
-        setVisible(b);
+        loadImage(endNode);
+        
+        // adding panels to screen
+        add(leftPanel, BorderLayout.WEST);
+        add(middlePanel, BorderLayout.CENTER);
+        add(rightPanel, BorderLayout.EAST);
     }
     
-    public static void main(String[] args) {
-        EndingMenu m = new EndingMenu();
-      //  m.setVisibility(true, new Point(100, 100));
+    public void setVisibility(boolean b)
+    {
+        setVisible(b);
+    }
+
+    public void massSetButtonListDesc(String[] buttonDescriptions)
+    {
+        assert (buttonDescriptions.length == 3) : "Description list must be of length 3";
+
+        for(int i =0; i < 3; i++)
+        {
+            JButton button = gameButtonList.get(i);
+            button.setText(buttonDescriptions[i]);
+            button.setToolTipText(buttonDescriptions[i]);
+        }
+    }
+
+    public void setEventDescription(String description)
+    {
+        topTextLabel.setText("<html>" + description);
+    }
+
+    public void loadImage(Graph.Node currentNode) {
+        String imagePath = currentNode.getImagePath();
+        if (imagePath != null && !imagePath.isEmpty()) {
+            setImage(imagePath);
+        } else {
+            setImage(null);
+        }
+    }
+    public void setImage (String imagePath)
+    {
+        ImageIcon imageIcon = new ImageIcon(imagePath);
+        Image image = imageIcon.getImage().getScaledInstance(450, 800, Image.SCALE_SMOOTH);//changed dem
+        leftLabel.setIcon(new ImageIcon(image));
     }
 }

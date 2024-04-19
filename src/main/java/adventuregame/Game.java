@@ -144,21 +144,24 @@ public class Game{
     public void updateGraphNode(int choiceIndex)
     {
         Graph.Node nextNode = gameGraph.nextNode(currentNode, choiceIndex);
+        checkGameOver(nextNode);
         currentNode = nextNode;
-        checkGameOver(currentNode);
+        //checkGameOver(currentNode);
     }
     /**
      * checkGameOver
-     * Function to check if game is completed
+     * Function to check if game is completed by checking for empty description
      * @param n
      * @return
      */
     public void checkGameOver(Graph.Node n)
     {
-        // check if node is null (no more node links)
-        if(n == null)
+        List<Choice> choices = n.getChoices();
+        String checkDesc = choices.get(0).getDescription();
+        
+        if(checkDesc.length() == 0)
         {
-            endMenu = new EndingMenu();
+            endMenu = new EndingMenu(n);
             windowingService.registerComponent(endMenu);
             windowingService.activateComponent(endMenu);
         }
