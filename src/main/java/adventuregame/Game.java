@@ -4,6 +4,7 @@ import adventuregame.gui.EndingMenu;
 import adventuregame.gui.GameMenu;
 import adventuregame.util.BindableEvent;
 import adventuregame.util.Event;
+import adventuregame.util.WindowService;
 
 import java.io.*;
 
@@ -24,25 +25,35 @@ public class Game{
     private GameMenu gameMenu;
     private EndingMenu endMenu;
     private Graph.Node currentNode;
+    private WindowService windowingService;
 
     public Event<onGameEndEvent> onGameEnd = new BindableEvent<onGameEndEvent>();
     public Consumer<GameMenu.GameButtonClickEvent> buttonClickListener;
 
-    public Game() throws IOException {
-        gameGraph = new Graph("game.json");
+    public Game(WindowService windowService) throws IOException {
+        windowingService = windowService;
+
         gameMenu = new GameMenu();
-        
+        windowingService.registerComponent(gameMenu);
+        windowService.activateComponent(gameMenu);
+
+        gameGraph = new Graph("game.json");
         gameGraph.initialize();
         currentNode = gameGraph.getRoot();
+
         setMenuInterface();
+
         gameMenu.setVisibility(true);
+
         updateGameState();
         initConnections();
     }
 
-    public Game(String saveDataFile)
+    public Game(WindowService windowService, String saveDataFile)
     {
         try{
+            windowingService = windowService;
+
             FileInputStream fis = new FileInputStream(saveDataFile);
             ObjectInputStream ois = new ObjectInputStream(fis);
             Graph.Node currentNodeReference = (Graph.Node) ois.readObject();
@@ -51,6 +62,9 @@ public class Game{
 
             gameGraph = new Graph("game.json");
             gameMenu = new GameMenu();
+            windowingService.registerComponent(gameMenu);
+            windowService.activateComponent(gameMenu);
+
             gameGraph.initialize();
 
             currentNode  = gameGraph.getNodeFromReference(currentNodeReference);
@@ -145,9 +159,8 @@ public class Game{
         if(n == null)
         {
             endMenu = new EndingMenu();
-            Point location = gameMenu.getLocation(); // make window appear at same location as game menu
-            endMenu.setVisibility(true, location);
-            gameMenu.setVisibility(false);
+            windowingService.registerComponent(endMenu);
+            windowingService.activateComponent(endMenu);
         }
     }
 

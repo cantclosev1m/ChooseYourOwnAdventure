@@ -11,7 +11,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class GameMenu extends JFrame {
+public class GameMenu extends JComponent {
 
     public interface GameButtonClickEvent
     {
@@ -42,10 +42,7 @@ public class GameMenu extends JFrame {
 
     public GameMenu()
     {
-        setTitle("Event Screen");
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
-        setLocationRelativeTo(null); // Center the window
         setLayout(new BorderLayout());
 
         // set up event screen layout
@@ -72,10 +69,13 @@ public class GameMenu extends JFrame {
         gameButtonList.add(1, choice2B);
         gameButtonList.add(2, choice3B);
 
+        Dimension buttonSize = new Dimension(150, 50);
+
         for(int i=0; i < 3; i++)
         {
             int finalI = i;
-            gameButtonList.get(i).addActionListener(new ActionListener() {
+            JButton button = gameButtonList.get(i);
+            button.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     onGameButtonClick.Fire(new GameButtonClickEvent() {
@@ -86,17 +86,10 @@ public class GameMenu extends JFrame {
                     });
                 }
             });
+            button.setPreferredSize(buttonSize);
+            bottomPanel.add(button);
         }
-        
-        Dimension buttonSize = new Dimension(150, 50);
-        
-        choice1B.setPreferredSize(buttonSize);
-        choice2B.setPreferredSize(buttonSize);
-        choice3B.setPreferredSize(buttonSize);
-        
-        bottomPanel.add(choice1B);
-        bottomPanel.add(choice2B);
-        bottomPanel.add(choice3B);
+
         middlePanel.add(bottomPanel, BorderLayout.SOUTH); // center bottom of middle section
 
         // right portion
@@ -130,10 +123,13 @@ public class GameMenu extends JFrame {
     public void massSetButtonListDesc(String[] buttonDescriptions)
     {
         assert (buttonDescriptions.length == 3) : "Description list must be of length 3";
-        
-        choice1B.setText(buttonDescriptions[0]);
-        choice2B.setText(buttonDescriptions[1]);
-        choice3B.setText(buttonDescriptions[2]);
+
+        for(int i =0; i < 3; i++)
+        {
+            JButton button = gameButtonList.get(i);
+            button.setText(buttonDescriptions[i]);
+            button.setToolTipText(buttonDescriptions[i]);
+        }
     }
 
     public void setEventDescription(String description)

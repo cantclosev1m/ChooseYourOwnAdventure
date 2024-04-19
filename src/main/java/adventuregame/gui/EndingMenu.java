@@ -5,18 +5,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class EndingMenu extends JFrame {
+public class EndingMenu extends JComponent {
     private JPanel panel;
     private JLabel endgameLabel;
     private JButton mmButton; // mm = main menu
     private JButton exitButton;
 
     public EndingMenu() {
-        setTitle("End");
-        setSize(800, 600);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
         // organization
+        setSize(800, 600);
+        setLayout(new BorderLayout());
         panel = new JPanel(new GridBagLayout()); 
 
         GridBagConstraints gbc = new GridBagConstraints();
@@ -52,16 +50,16 @@ public class EndingMenu extends JFrame {
         panel.add(mmButton, gbc);
         gbc.gridy++;
         panel.add(exitButton, gbc);
-        add(panel);
+        add(panel, BorderLayout.CENTER);
     }
 
-    public void setVisibility(boolean b, Point coord) {
-        setLocation(coord); // make new window in the same location as game menu screen
+    public void setVisibility(boolean b) {
+       // setLocation(coord); // make new window in the same location as game menu screen
         setVisible(b);
     }
     
     public static void main(String[] args) {
         EndingMenu m = new EndingMenu();
-        m.setVisibility(true, new Point(100, 100));
+      //  m.setVisibility(true, new Point(100, 100));
     }
 }
