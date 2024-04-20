@@ -313,5 +313,41 @@
                 "Choice_link": 0
             }
         ]
+    },
+    {
+        "Description": "You give in to the presence urging you towards the altar. Once there, you pick up the blood soaked dagger, though you are no longer in control of your actions. Detached from your own self, you observe that the dagger's blade is twisted and curved in an odd, exotic way, and the blade itself a dark ebony color underneath the crimson stains. ''My life for Molak-Durth'', you say, yet the voice is not your own. It matters little, as you plunge the blade into your chest, and all goes black...  ",
+        "Image_Path": "Images\\Fantasy_altar.png",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "You fight against the dark force tempting you towards the altar. Raging against its hold, you begin to go around the room toppling every statue and idol related to this dark being. ''YOU DARE DEFILE MY SHRINES, YOU DISGUSTING MAN-THING!'', a voice from the depths bellows out. The floor beneath you starts to tremble, as if you were in the midst of an earthquake. The room begins to crumble around you, and a chunk of stone dislodges from the ceiling, nearly crushing you. Looking up to where the stone fell, you notice the light of the sun peeking through the opening. You scramble up the rubble that has now formed a makeshift stairway into the outside world. Once outside, you faintly hear the angered howls of whatever being inhabited that place. Exhausted, you lie down beneath a nearby tree, savoring the sight of the sun and the feel of the earth beneath your feet.  ",
+        "Image_Path": "Images\\Fantasy_altar.png",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
     }
 ]
