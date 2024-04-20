@@ -81,16 +81,16 @@
         "Choices": [
             {
                 "Choice_Description": "Ignore the uneasy feeling, stuff as much loot as you can into your pack as it can hold",
-                "Choice_link": 0
+                "Choice_link": 13
 
             },
             {
                 "Choice_Description": "Survey the room for the source of uneasiness",
-                "Choice_link": 0
+                "Choice_link": 14
             },
             {
                 "Choice_Description": "Waste no time leaving the room",
-                "Choice_link": 0
+                "Choice_link": 15
             }
         ]
     },
@@ -100,16 +100,16 @@
         "Choices": [
             {
                 "Choice_Description": "Ignore the uneasy feeling, stuff as much loot as you can into your pack as it can hold",
-                "Choice_link": 0
+                "Choice_link": 13
 
             },
             {
                 "Choice_Description": "Survey the room for the source of uneasiness",
-                "Choice_link": 0
+                "Choice_link": 14
             },
             {
                 "Choice_Description": "Waste no time leaving the room",
-                "Choice_link": 0
+                "Choice_link": 15
             }
         ]
     },
@@ -132,40 +132,40 @@
         ]
     },
     {
-        "Description": "You take a matchbox from your pack, lighting the nearby torches. The bats begin to stir angrily until the flames scare them away. You make your way out of the room",
+        "Description": "You take a matchbox from your pack, lighting the nearby torches. The bats begin to stir angrily until the flames scare them away. You make your way out of the room. The frightened bats you fled from suddenly look more appealing than the sight currently in front of you. You are standing in a stone room, lit by candlelight. In the center of the room is an altar, on top of which lays a bloody dagger. Various effigies to some bat-like deity aline the room. You feel a dark presence beckoning you to the knife.",
         "Image_Path": "Images\\bat_torches.png",
         "Choices": [
             {
                 "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_link": 16
             },
             {
                 "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_link": 17
             },
             {
                 "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_link": 18
             }
         ]
 
 
     },
     {
-    "Description": "You creep across the room, taking great care not disturb the sleeping bats. You run your hands along the wall until you find a door. Swinging it open, you quickly pass through and slam it shut. Once out, you hear the angry whir of the bats behind the door",
+    "Description": "You creep across the room, taking great care not disturb the sleeping bats. You run your hands along the wall until you find a door. Swinging it open, you quickly pass through and slam it shut. Once out, you hear the angry whir of the bats behind the door. The screeching bats you fled from suddenly look more appealing than the sight currently in front of you. You are standing in a stone room, lit by candlelight. In the center of the room is an altar, on top of which lays a bloody dagger. Various effigies to some bat-like deity aline the room. You feel a dark presence beckoning you to the knife.",
     "Image_Path": "Images\\Dark_cave.png",
     "Choices": [
     {
-        "Choice_Description":"",
-        "Choice_link": 0
+        "Choice_Description":"Attempt to speak to the deity",
+        "Choice_link": 16
     },
     {
-        "Choice_Description":"",
-        "Choice_link": 0
+        "Choice_Description":"Give in to the dark presence.",
+        "Choice_link": 17
     },
     {
-        "Choice_Description":"",
-        "Choice_link": 0
+        "Choice_Description":"Reject the presence, destroy the effigies.",
+        "Choice_link": 18
     }
     ]
 
@@ -194,15 +194,15 @@
         "Choices": [
             {
                 "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_link": 19
             },
             {
                 "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_link": 20
             },
             {
                 "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_link": 21
             }
         ]
     },
@@ -212,15 +212,15 @@
         "Choices": [
             {
                 "Choice_Description": "",
-                "Choice_link": 0
+                "Choice_link": 22
             },
             {
                 "Choice_Description": "",
-                "Choice_link": 0
+                "Choice_link": 23
             },
             {
                 "Choice_Description": "",
-                "Choice_link": 0
+                "Choice_link": 24
             }
         ]
     },
@@ -241,8 +241,77 @@
                 "Choice_link": -1
             }
         ]
+    },
+    {
+        "Description": "You start stuffing the loot into your pack. Rifling through the the treasure, you find jewel-encrusted daggers, gems, fancy goblets, and the like. Your pack doesn't seem to ever get full, despite spending what feels like hours looting through the treasure. Out of the corner of your eye you spot a pale humanoid figure watching you. The figure is seemingly hairless, clothed in purple robes befitting of royalty, with a golden crown sitting atop its misshapen skull. The figure makes its way towards you. ",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            }
+        ]
+    },
+    {
+        "Description": "Even amongst all of the tempting treasure, you're unable to shake the uneasy feeling. As you look around the room, you spot a pale figure watching you intently. The figure is deathly pale, clothed in royal robes of purple, and a gold crown sits atop the overstretched skin on its pale skull. The figure begins to make his way towards you. ",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            }
+        ]
+    },
+    {
+        "Description": "You begin to make your way to the double doors across the treasure room, with the loot crunching under foot. As your hand grasps the handle to open the doors, you feel an icy presence run along the back of your neck. You tentatively turn around, and are greeted with the visage of a pale, undead humanoid inches from your face. The figure is clothed in purple robes, and a crown sits atop its hairless skull.",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": 0
+            }
+        ]
+    },
+    {
+        "Description": "''What are you?'' you inquire to the unseen force surrounding you. At first, no response is given, but you begin to feel a powerful surge as a voice from the depths of the underworld responds. ''I am Molak-Durth, seventh prince of Helrak, sovereign of hate. Now, what is it that you seek mortal that would prompt you to dare question a prince of Helrak in his domain? Is it power beyond that of Man you lust after? Or are you merely a wayward traveler looking for a way out of this labyrinth? Ask and you shall receive, man-thing.'' ",
+        "Image_Path": "Images\\Fantasy_altar.png",
+        "Choices": [
+            {
+                "Choice_Description":"''I seek power.''",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"''I need a way out of this place.''",
+                "Choice_link": 0
+            },
+            {
+                "Choice_Description":"''I want not but for your destruction, demon-spawn!''",
+                "Choice_link": 0
+            }
+        ]
     }
-
-
-
 ]
