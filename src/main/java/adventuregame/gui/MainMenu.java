@@ -40,11 +40,14 @@ public class MainMenu extends JComponent {
         gbc = new GridBagConstraints();
 
         // Set up headerPanel
-        headerPanel.setBackground(Color.RED);
+        headerPanel.setBackground(Color.BLACK);
         titleLabel.setFont(new Font("Book Antiqua", Font.BOLD, 500));
-        titleLabel.setForeground(Color.BLACK);
+        titleLabel.setForeground(Color.MAGENTA);
         titleLabel.setBorder(BorderFactory.createEmptyBorder(35, 0, 0, 0));
         headerPanel.add(titleLabel, BorderLayout.CENTER);
+        JFrame f= new JFrame();//adding JPanel to JFrame
+        f.add(headerPanel);
+        f.setVisible(true);
         add(headerPanel, BorderLayout.NORTH);
 
         // Set up main screen
