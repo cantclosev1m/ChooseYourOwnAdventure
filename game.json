@@ -189,37 +189,37 @@
         ]
     },
     {
-        "Description": "You calmly approach the man, gesturing that you mean no harm. You inquire about how he got here, yet all he says is, 'Don't let them take me.' As you get closer, his eyes widen in fear. 'DEMON! DEMON!' he screams. Before you can calm him down, he draws a knife and slashes his own throat.",
+        "Description": "You calmly approach the man, gesturing that you mean no harm. You inquire about how he got here, yet all he says is, ''Don't let them take me.'' As you get closer, his eyes widen in fear. ''DEMON! DEMON!'' he screams. Before you can calm him down, he draws a knife and slashes his own throat. You rush to render aid, but it quickly becomes clear the man is already dead. Shaken from the event you've just witnessed, you quickly leave the room. You enter into a completely pitch black room, yet you sense you're not alone. From within the darkness, you spot a pair of glowing red eyes, and an unnatural, manic sounding voice begins speaking. ''HAH! it seems you have become acquainted with the poor sap who failed my little game... hopefully you fare better. Here's the deal mortal, you answer a series of three riddles correctly, I'll show you the way out of this place. Answer any of them wrong, and you'll end up like our little friend back there. Now, you're probably thinking to yourself, 'Why would I trust a pair of glowing red eyes to hold up his end of the deal?' You don't have an option! Isn't that the damndest thing! Now, for your first riddle, what is it that fills the sky and the earth, shakes all foundations, but cannot be seen by thine eyes or held in one's hands?'' ",
         "Image_Path": "Images\\Lone_man.png",
         "Choices": [
             {
-                "Choice_Description":"",
+                "Choice_Description":"''Wind''",
                 "Choice_link": 19
             },
             {
-                "Choice_Description":"",
+                "Choice_Description":"''Lightning''",
                 "Choice_link": 20
             },
             {
-                "Choice_Description":"",
+                "Choice_Description":"''Trees''",
                 "Choice_link": 21
             }
         ]
     },
     {
-        "Description": "You take a look at the murmuring mess before you and decide it's best not to take chances. You draw your sword and put the man out of his misery with a quick thrust into his chest. You make your way out of the room, leaving his body from whence you came.",
+        "Description": "You take a look at the murmuring mess before you and decide it's best not to take chances. You draw your sword and put the man out of his misery with a quick thrust into his chest. You make your way out of the room, leaving his body from whence you came. Upon exiting the room, you stumble into a pitch black room. Fumbling about and running your hands across the stone walls to gain a sense of direction, you hear a feminine voice call out from within the darkness, and spot the flickering light of a candle. ''Follow the light, weary traveler. I shall show you the way out of this place,'' says the voice. You see the figure of a lady illuminated by the candlelight, with silvery blonde hair clothed in a bright white gown. ",
         "Image_Path": "Images\\Dead_body.png",
         "Choices": [
             {
-                "Choice_Description": "",
+                "Choice_Description": "''What are you doing down here?''",
                 "Choice_link": 22
             },
             {
-                "Choice_Description": "",
+                "Choice_Description": "''What is this place?''",
                 "Choice_link": 23
             },
             {
-                "Choice_Description": "",
+                "Choice_Description": "Stay silent, follow the lady",
                 "Choice_link": 24
             }
         ]
@@ -346,6 +346,24 @@
             },
             {
                 "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "''You're not as dumb as you look, sadly... Anyways, you've got two more to go. What is it that speaks in all languages, yet is silent when it rests, and is deaf for all its life?",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"''A snake''",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"''A quill''",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"''Money''",
                 "Choice_link": -1
             }
         ]
