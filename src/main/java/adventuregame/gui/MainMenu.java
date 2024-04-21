@@ -29,7 +29,7 @@ public class MainMenu extends JComponent {
     public MainMenu() {
         // Initialize variables
         headerPanel = new JPanel(new BorderLayout());
-        titleLabel = new JLabel("<html>ChooseYourOwnAdventure", SwingConstants.CENTER);
+        titleLabel = new JLabel("The Labyrinth", SwingConstants.CENTER);
         nGameB = new JButton("New Game");
         lGameB = new JButton("Load Game");
         achievementsB = new JButton("Achievements");
@@ -40,15 +40,19 @@ public class MainMenu extends JComponent {
         gbc = new GridBagConstraints();
 
         // Set up headerPanel
-        headerPanel.setBackground(Color.BLACK);
-        titleLabel.setFont(new Font("Book Antiqua", Font.BOLD, 500));
+        headerPanel.setBackground(Color.WHITE);
+        titleLabel.setFont(new Font("Book Antiqua", Font.BOLD, 36));
         titleLabel.setForeground(Color.MAGENTA);
         titleLabel.setBorder(BorderFactory.createEmptyBorder(35, 0, 0, 0));
-        headerPanel.add(titleLabel, BorderLayout.CENTER);
+        headerPanel.add(titleLabel, BorderLayout.NORTH);
         JFrame f= new JFrame();//adding JPanel to JFrame
         f.add(headerPanel);
         f.setVisible(true);
-        add(headerPanel, BorderLayout.NORTH);
+        add(f, BorderLayout.NORTH);
+        f.add(nGameB);//trying to get the buttons to work
+        f.setVisible(true);
+        
+       // add(headerPanel, BorderLayout.CENTER);
 
         // Set up main screen
         setLayout(new BorderLayout());
