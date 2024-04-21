@@ -28,6 +28,8 @@ public class MainMenu extends JComponent {
 
     public MainMenu() {
         // Initialize variables
+        JFrame f= new JFrame();//adding headerpanel to JFrame
+        JFrame frame = new JFrame();//adding buttonpanel to jframe
         headerPanel = new JPanel(new BorderLayout());
         titleLabel = new JLabel("The Labyrinth", SwingConstants.CENTER);
         nGameB = new JButton("New Game");
@@ -40,18 +42,16 @@ public class MainMenu extends JComponent {
         gbc = new GridBagConstraints();
 
         // Set up headerPanel
-        headerPanel.setBackground(Color.WHITE);
+        headerPanel.setBackground(Color.BLACK);
         titleLabel.setFont(new Font("Book Antiqua", Font.BOLD, 36));
         titleLabel.setForeground(Color.MAGENTA);
         titleLabel.setBorder(BorderFactory.createEmptyBorder(35, 0, 0, 0));
         headerPanel.add(titleLabel, BorderLayout.NORTH);
-        JFrame f= new JFrame();//adding JPanel to JFrame
+     
         f.add(headerPanel);
         f.setVisible(true);
         add(f, BorderLayout.NORTH);
-        f.add(nGameB);//trying to get the buttons to work
-        f.setVisible(true);
-        
+ 
        // add(headerPanel, BorderLayout.CENTER);
 
         // Set up main screen
@@ -71,16 +71,22 @@ public class MainMenu extends JComponent {
         gbc.anchor = GridBagConstraints.CENTER;
 
         // Add buttons to the buttonPanel
+       
         buttonPanel.add(nGameB, gbc);
         gbc.gridy++;
+       
         buttonPanel.add(lGameB, gbc);
         gbc.gridy++;
+       
         buttonPanel.add(achievementsB, gbc);
         gbc.gridy++;
+       
         buttonPanel.add(settingsB, gbc);
         gbc.gridy++;
         buttonPanel.add(quitB, gbc);
-
+       
+        
+        
         nGameB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -96,6 +102,8 @@ public class MainMenu extends JComponent {
         });
 
         // Add the buttonPanel to the center of the MainMenu
-        add(buttonPanel, BorderLayout.CENTER);
+         frame.add(buttonPanel);
+        frame.setVisible(true);
+        add(frame, BorderLayout.CENTER);
     }
 }
