@@ -30,9 +30,10 @@ public class Game{
     public Event<onGameEndEvent> onGameEnd = new BindableEvent<onGameEndEvent>();
     public Consumer<GameMenu.GameButtonClickEvent> buttonClickListener;
 
-    public Game(WindowService windowService) throws IOException {
+    public Game(WindowService windowService, EndingMenu eMenu) throws IOException {
         windowingService = windowService;
-
+        endMenu = eMenu;
+ 
         gameMenu = new GameMenu();
         windowingService.registerComponent(gameMenu);
         windowService.activateComponent(gameMenu);
@@ -158,10 +159,11 @@ public class Game{
     {
         List<Choice> choices = n.getChoices();
         String checkDesc = choices.get(0).getDescription();
+        endMenu.endNode = n;
         
         if(checkDesc.length() == 0)
         {
-            endMenu = new EndingMenu(n);
+            endMenu.create();
             windowingService.registerComponent(endMenu);
             windowingService.activateComponent(endMenu);
         }

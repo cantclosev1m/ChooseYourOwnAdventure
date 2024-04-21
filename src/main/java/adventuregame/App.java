@@ -7,6 +7,7 @@ import java.io.ObjectOutputStream;
 
 import javax.swing.*;
 import adventuregame.gui.MainMenu;
+import adventuregame.gui.EndingMenu;
 import adventuregame.util.WindowService;
 
 /**
@@ -22,7 +23,7 @@ public class App
     private String saveFile = "saveFile.txt";
     private WindowService windowingService;
     private MainMenu mainMenu;
-
+    private EndingMenu endMenu;
     private static void setDefaultTheme() throws UnsupportedLookAndFeelException {
 
         // Should be separated from App class, but oh well
@@ -55,6 +56,7 @@ public class App
     public App() throws UnsupportedLookAndFeelException {
         setDefaultTheme();
         mainMenu = new MainMenu();
+        endMenu = new EndingMenu();
         windowingService = new WindowService();
         windowingService.registerComponent(mainMenu);
         startApp();
@@ -66,7 +68,7 @@ public class App
             @Override
             public void run() {
                 windowingService.activateComponent(mainMenu);
-
+                
                 mainMenu.onMenuInit.Connect((Void) -> {
                     System.out.println("Hello from the menu");
                 });
@@ -92,13 +94,24 @@ public class App
                         throw new RuntimeException(e);
                     }
                 });
-
+                
+                endMenu.playAgain.Connect((Void) -> {
+                    try {
+                        startGame();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                });
+                endMenu.goToMM.Connect((Void) -> {
+                    windowingService.activateComponent(mainMenu);
+                });
+                
             }
         });
     }
 
     public void startGame() throws IOException {
-        Game game = new Game(windowingService);
+        Game game = new Game(windowingService, endMenu);
         game.onGameEnd.Connect(onGameEndEvent -> {
             saveGame(onGameEndEvent.getSavedNode());
         });

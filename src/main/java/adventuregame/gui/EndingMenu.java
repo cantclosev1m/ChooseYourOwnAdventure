@@ -1,11 +1,15 @@
 package adventuregame.gui;
 
 import adventuregame.Graph;
+import adventuregame.util.Event;
 import adventuregame.util.BindableEvent;
+
+import adventuregame.App;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class EndingMenu extends JComponent {
@@ -28,8 +32,12 @@ public class EndingMenu extends JComponent {
     private java.util.List<JButton> gameButtonList = new ArrayList<>();
     public adventuregame.util.Event<GameMenu.GameButtonClickEvent> onGameButtonClick = new BindableEvent<GameMenu.GameButtonClickEvent>();
     public adventuregame.util.Event<Void> onGameSave = new BindableEvent<>();
+    public Graph.Node endNode;
     
-    public EndingMenu(Graph.Node endNode) {
+    public Event<Void> playAgain = new BindableEvent<>();
+    public Event<Void> goToMM = new BindableEvent<>();
+    
+    public void create() {
         setSize(800, 600);
         setLayout(new BorderLayout());
 
@@ -57,19 +65,19 @@ public class EndingMenu extends JComponent {
         mainMenuB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // stuff
+                goToMM.Fire();
             }
         });
         playAgainB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // stuff
+                playAgain.Fire();
             }
         });
         quitB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // stuff
+                System.exit(0);
             }
         });
         
