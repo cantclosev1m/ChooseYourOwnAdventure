@@ -247,16 +247,16 @@
         "Image_Path": "",
         "Choices": [
             {
-                "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_Description":"Offer to put the treasure back",
+                "Choice_link": 25
             },
             {
-                "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_Description":"Attack the being",
+                "Choice_link": 26
             },
             {
-                "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_Description":"''Who goes there!''",
+                "Choice_link": 27
             }
         ]
     },
@@ -265,16 +265,16 @@
         "Image_Path": "",
         "Choices": [
             {
-                "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_Description":"''What are you?''",
+                "Choice_link": 28
             },
             {
-                "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_Description":"''What is this place''",
+                "Choice_link": 29
             },
             {
-                "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_Description":"Stay silent, wait for the being to make a move",
+                "Choice_link": 30
             }
         ]
     },
@@ -283,16 +283,16 @@
         "Image_Path": "",
         "Choices": [
             {
-                "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_Description":"''What are you?''",
+                "Choice_link": 28
             },
             {
-                "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_Description":"''What is this place?''",
+                "Choice_link": 29
             },
             {
-                "Choice_Description":"",
-                "Choice_link": 0
+                "Choice_Description":"Stay silent, prepare yourself for violence if it comes to it.",
+                "Choice_link": 30
             }
         ]
     },
@@ -302,15 +302,15 @@
         "Choices": [
             {
                 "Choice_Description":"''I seek power.''",
-                "Choice_link": 0
+                "Choice_link": 31
             },
             {
                 "Choice_Description":"''I need a way out of this place.''",
-                "Choice_link": 0
+                "Choice_link": 32
             },
             {
                 "Choice_Description":"''I want not but for your destruction, demon-spawn!''",
-                "Choice_link": 0
+                "Choice_link": 33
             }
         ]
     },
@@ -442,6 +442,24 @@
     },
     {
         "Description": "You silently trudge along, following the the path illuminated by the lady. ''No words of thanks for guiding you out of this place? Seems befitting of one who would oh so cruelly kill that poor lunatic back there.'' The lady stops in her tracks and begins laughing. ''Not only are you an ingrate, you're also a fool. Was it really the wisest course of action to follow some random lady after just meeting a man rambling about demons? You're as dumb as you are cruel.'' The lady's form starts shifting into some grotesque mockery of the human figure, and before you can react the demon is charging you, claws outstretched. You fumble around, reaching for your weapon, but you are too late. The demon is on top of you, and the last thing you see is the gnashing of bloody teeth and claws swinging down at you.",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "You begin dumping the loot from your pack to appease",
         "Image_Path": "",
         "Choices": [
             {
