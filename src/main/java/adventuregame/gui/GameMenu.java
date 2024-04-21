@@ -78,6 +78,7 @@ public class GameMenu extends JComponent {
         gameButtonList.add(1, choice2B);
         gameButtonList.add(2, choice3B);
 
+
         Dimension buttonSize = new Dimension(150, 50);
 
         for(int i=0; i < 3; i++)
@@ -142,9 +143,10 @@ public class GameMenu extends JComponent {
 
         for(int i =0; i < 3; i++)
         {
+
             JButton button = gameButtonList.get(i);
-            button.setText(buttonDescriptions[i]);
-            button.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 18));
+            button.setText("<html>" + buttonDescriptions[i]);
+            button.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 14));
             button.setBackground(Color.gray);
             button.setToolTipText(buttonDescriptions[i]);
         }
