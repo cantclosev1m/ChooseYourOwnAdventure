@@ -5,10 +5,12 @@ import adventuregame.util.Event;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MainMenu extends JComponent {
+
 
     private JPanel headerPanel;
     private JLabel titleLabel;
@@ -18,6 +20,7 @@ public class MainMenu extends JComponent {
     private JButton settingsB;
     private JButton quitB;
     private Dimension buttonSize;
+
     private JPanel buttonPanel;
     private GridBagConstraints gbc;
 
@@ -28,8 +31,11 @@ public class MainMenu extends JComponent {
 
     public MainMenu() {
         // Initialize variables
-        JFrame f= new JFrame();//adding headerpanel to JFrame
-        JFrame frame = new JFrame();//adding buttonpanel to jframe
+        // Set up main screen
+        setBackground(Color.BLACK);
+        setLayout(new BorderLayout());
+        JFrame frame = new JFrame();
+        frame.getContentPane().setBackground(Color.BLACK);
         headerPanel = new JPanel(new BorderLayout());
         titleLabel = new JLabel("The Labyrinth", SwingConstants.CENTER);
         nGameB = new JButton("New Game");
@@ -41,21 +47,19 @@ public class MainMenu extends JComponent {
         buttonPanel = new JPanel(new GridBagLayout());
         gbc = new GridBagConstraints();
 
+
         // Set up headerPanel
         headerPanel.setBackground(Color.BLACK);
-        titleLabel.setFont(new Font("Book Antiqua", Font.BOLD, 36));
-        titleLabel.setForeground(Color.MAGENTA);
+        titleLabel.setFont(new Font("Tempus Sans ITC", Font.BOLD, 36));
+        titleLabel.setForeground(Color.WHITE);
         titleLabel.setBorder(BorderFactory.createEmptyBorder(35, 0, 0, 0));
         headerPanel.add(titleLabel, BorderLayout.NORTH);
-     
-        f.add(headerPanel);
-        f.setVisible(true);
-        add(f, BorderLayout.NORTH);
- 
-       // add(headerPanel, BorderLayout.CENTER);
 
-        // Set up main screen
-        setLayout(new BorderLayout());
+
+
+        add(headerPanel, BorderLayout.NORTH);
+
+
 
         // Set preferred size for buttons
         nGameB.setPreferredSize(buttonSize);
@@ -71,22 +75,32 @@ public class MainMenu extends JComponent {
         gbc.anchor = GridBagConstraints.CENTER;
 
         // Add buttons to the buttonPanel
-       
+        buttonPanel.setBackground(Color.BLACK);
         buttonPanel.add(nGameB, gbc);
+        nGameB.setBackground(Color.darkGray);
+        nGameB.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 18));
         gbc.gridy++;
-       
+
         buttonPanel.add(lGameB, gbc);
+        lGameB.setBackground(Color.darkGray);
+        lGameB.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 18));
         gbc.gridy++;
-       
+
         buttonPanel.add(achievementsB, gbc);
+        achievementsB.setBackground(Color.darkGray);
+        achievementsB.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 18));
         gbc.gridy++;
-       
+
         buttonPanel.add(settingsB, gbc);
+        settingsB.setBackground(Color.darkGray);
+        settingsB.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 18));
         gbc.gridy++;
         buttonPanel.add(quitB, gbc);
-       
-        
-        
+        quitB.setBackground(Color.darkGray);
+        quitB.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 18));
+
+
+
         nGameB.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -102,8 +116,8 @@ public class MainMenu extends JComponent {
         });
 
         // Add the buttonPanel to the center of the MainMenu
-         frame.add(buttonPanel);
-        frame.setVisible(true);
-        add(frame, BorderLayout.CENTER);
+        add(buttonPanel);
+
+
     }
 }
