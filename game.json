@@ -48,17 +48,17 @@
                 "Choice_link": 7
             },
             {
-                "Choice_Description": "Attack the bats",
+                "Choice_Description": "Sneak through the room",
                 "Choice_link": 8
             },
             {
-                "Choice_Description": "Sneak through the room",
+                "Choice_Description": "Attack the bats",
                 "Choice_link": 9
             }
         ]
     },
     {
-        "Description": "Choosing the right tunnel, you come to a circular chamber. Once within, you make out inane human ramblings coming from a haggard, bloodied adventurer.\nYou step closer to comfort him, yet his mutterings only grow more frenzied. What will you do?",
+        "Description": "Choosing the right tunnel, you come to a circular chamber. Once within, you make out inane human ramblings coming from a haggard, bloodied adventurer.\nYou step closer to comfort him, yet his mutterings only grow more frenzied. ''Demons are here, demons are here,'' he repeats to himself over and over...",
         "Image_Path": "Images\\Ogre.png",
         "Choices": [
             {
@@ -136,15 +136,15 @@
         "Image_Path": "Images\\bat_torches.png",
         "Choices": [
             {
-                "Choice_Description":"",
+                "Choice_Description":"Attempt to speak to the deity",
                 "Choice_link": 16
             },
             {
-                "Choice_Description":"",
+                "Choice_Description":"Give in to the dark presence.",
                 "Choice_link": 17
             },
             {
-                "Choice_Description":"",
+                "Choice_Description":"Reject the presence, destroy the effigies.",
                 "Choice_link": 18
             }
         ]
@@ -421,5 +421,43 @@
                 "Choice_link": -1
             }
         ]
+    },
+    {
+        "Description": "''I do not know the true nature of this labyrinth, I barely know the true nature of myself. For as long as I can remember, I've been wandering this place. On random chance I'll encounter travelers such as yourself, but they always seem to meet grizzly ends, such as the man you killed back there.'' You stand still in shock, how could she know about the man you killed? Sensing your discomfort, the lady stops in her tracks and begins to laugh uncontrollably. ''What? Did you think I didn't know? What demon do you think he was raving about? You just thought you would be saved by some fair maiden after showing no such mercy yourself... fate has a cruel sense of justice, not that I've ever been one for the concept of justice.'' The lady turns to face you, what was once her face now contorted in an inhumanly long grin, with teeth sharp as knives glistening in the candle light. You rush to draw your sword, but before it can be unsheathed the being is on top of you, and your death is swiftly dispatched.",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "You silently trudge along, following the the path illuminated by the lady. ''No words of thanks for guiding you out of this place? Seems befitting of one who would oh so cruelly kill that poor lunatic back there.'' The lady stops in her tracks and begins laughing. ''Not only are you an ingrate, you're also a fool. Was it really the wisest course of action to follow some random lady after just meeting a man rambling about demons? You're as dumb as you are cruel.'' The lady's form starts shifting into some grotesque mockery of the human figure, and before you can react the demon is charging you, claws outstretched. You fumble around, reaching for your weapon, but you are too late. The demon is on top of you, and the last thing you see is the gnashing of bloody teeth and claws swinging down at you.",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
     }
+
+
 ]
