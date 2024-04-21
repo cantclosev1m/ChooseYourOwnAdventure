@@ -351,7 +351,7 @@
         ]
     },
     {
-        "Description": "''You're not as dumb as you look, sadly... Anyways, you've got two more to go. What is it that speaks in all languages, yet is silent when it rests, and is deaf for all its life?",
+        "Description": "''You're not as dumb as you look, sadly... Anyways, you've got two more to go. What is it that speaks in all languages, yet is silent when it rests, and is deaf for all its life?''",
         "Image_Path": "",
         "Choices": [
             {
@@ -364,6 +364,60 @@
             },
             {
                 "Choice_Description":"''Money''",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "The being doesn't respond, and you can feel the tension within the silence. Suddenly, you see a flash of claws and fangs emerge from the darkness as you feel sharp pain throughout your body, and all goes black...",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "The word has barely finished leaving your mouth before the being launches itself from the darkness, claws outstretched in a frenzy of ripping and tearing. That would be the last image you would ever see...",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "''I am no mere maiden. I have been cursed to walk this place to my dying day, guiding wayward souls like you out of this dark place,'' the lady responds. You follow her lead through the tunnels of the labyrinth for what feels like ages, until you arrive at an underground pond, the water crystal clear and shimmering. The lady stops at the foot of the pond, staring at her reflection. You walk up to her left shoulder, taking a moment to glance at your own reflection, your face covered in grime and dirt, nearly unrecognizable from your time in this place. You then notice the lady's reflection, of which there is something deeply wrong with. Her face seems to be contorting and shifting inhumanly, as if something was trying to break free out of her face. She, or rather it, begins to shake with laughter. ''Did you actually think I was leading you out of this place? HA! You killed that poor fool blabbering about a demon, and you didn't find it odd there was nothing but a woman in the next room? You honestly deserve what I'm going to do you,'' the creature tells you, shifting its form in front of your very eyes. It grabs you by the hair with inhumanly strong hands and plunges your face into the water below. You struggle, but you lack the strength to break free. Water begins to fill your lungs, though submerged in the water, you can still hear the being's maniacal laughter as your life fades...  ",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
                 "Choice_link": -1
             }
         ]
