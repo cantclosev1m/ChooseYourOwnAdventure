@@ -273,7 +273,7 @@
                 "Choice_link": 29
             },
             {
-                "Choice_Description":"Stay silent, wait for the being to make a move",
+                "Choice_Description":"Stay silent and attack the being",
                 "Choice_link": 30
             }
         ]
@@ -291,7 +291,7 @@
                 "Choice_link": 29
             },
             {
-                "Choice_Description":"Stay silent, prepare yourself for violence if it comes to it.",
+                "Choice_Description":"Stay silent and slay the being",
                 "Choice_link": 30
             }
         ]
@@ -309,7 +309,7 @@
                 "Choice_link": 32
             },
             {
-                "Choice_Description":"''I want not but for your destruction, demon-spawn!''",
+                "Choice_Description":"I want not but for your destruction, demon-spawn!",
                 "Choice_link": 33
             }
         ]
@@ -459,7 +459,7 @@
         ]
     },
     {
-        "Description": "You begin dumping the loot from your pack to appease",
+        "Description": "You begin dumping the loot from your pack to appease the being as it walks closer to you. Instead of a look of anger, the being seems to pity you. ''It is too late for that young one. By taking the wealth held within this accursed place, you have allowed it to take a part of you. I have wandered this place for an uncountable number of years as punishment for the greed of my mortal life.'' ''What do you mean it has taken a part of me?'' you inquire. ''I was once the ruler of the Kingdom of Fiann. Although the majority of my reign was prosperous, it was largely due to the work of my predecessors. Instead I concerned myself with unnecessary celebrations, feasts, and the construction of gaudy statues honoring myself. In the latter days of my reign, the enemies of our kingdom had formed a temporary alliance to wage a war of our destruction. There was little I as king could do, but I disgraced myself in my final moments. While our enemies were battering down the gates of our capital, I secluded myself inside the royal vault, unable to part with my wealth. I met my end as a coward, and for my avarice, the Eternal Judges deemed this my punishment. I fear you and I shall share the same fate now...''. You refuse to believe this being's claims, and rush towards the double doors of the room. You attempt to pull the doors open, yet you can't get them open. You look back to where you entered the room, yet the opening is no longer there... ",
         "Image_Path": "",
         "Choices": [
             {
@@ -475,7 +475,152 @@
                 "Choice_link": -1
             }
         ]
+    },
+    {
+        "Description": "You draw your longsword and charge the being. As you thrust into the creature's gut, your sword passes through nothing but air. The being looks at you, almost as if he's amused. ''I'm sorry young one, that's not going to work. I'm cursed to walk this place as punishment for my greed in life, and you my friend have met the same fate by taking these accursed trinkets into your possession. You shall be damned to linger here evermore, just as I am.'' Believing the being to be bluffing, you turn your back to him and head towards the gaudy double doors marking the exit to this place. You attempt to open them, but they remain steadfast in their place. You think of going back the way you entered, but the hole you passed through is no longer open. Horror sets in as you realize the spirit was telling the truth... ",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "''In a past life, I went by Raemon the Third, King of Fiann. I'm sure enough time has passed that those words mean nothing to you. You may be wondering what is a king doing in such a place. Well, this is my eternal punishment. In the last days of my reign, and consequently the last days of the kingdom, we were beset on all fronts by enemies who sought our destruction. As the hordes broke down the gates to our capital city Laenor, I sequestered myself inside the royal vault. Fearing the loss of my royal wealth more than I cared for my subjects or my kingdom. Our foes found me and dealt with me as you would expect, and the Eternal Judges cursed me to this place. Stuck with the things I feared to part with most for all eternity. That curse has now befallen you, since you regretfully decided to loot this place. I'm sorry that it came to this.'' You feel your mind reeling in shock from what this man, or what was once a man, is saying. He seems totally earnest. You attempt to go back the way you entered, but the hole has somehow been sealed off without your knowledge. Knowing now that the being was telling the truth, you resolve to take your own life to escape this torment. Upon drawing your sword, and falling upon it, you are horrified to see that it made no discernible wound. It seems there truly is no way out of this place.  ",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "''In a past life, I went by Raemon the Third, King of Fiann. I'm sure enough time has passed that those words mean nothing to you. You may be wondering what is a king doing in such a place. Well, this is my eternal punishment. In the last days of my reign, and consequently the last days of the kingdom, we were beset on all fronts by enemies who sought our destruction. As the hordes broke down the gates to our capital city Laenor, I sequestered myself inside the royal vault. Fearing the loss of my royal wealth more than I cared for my subjects or my kingdom. Our foes found me and dealt with me as you would expect, and the Eternal Judges cursed me to this place. You're lucky you did not take any of the items in this place, for I fear that the curse would've then been bestowed to you. Traveler, I ask of you a favor. You are not the first to enter this cursed place, but you are the first to not have fallen under its sway. I believe I can only be set free by one not affected. Please, draw your longsword and end my suffering. In return, the way out of this place shall be opened for you.'' ",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"Free him from his curse",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"''You deserve your fate, I'll find my own way out.''",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"Kill him, hoping the curse dies with him so you can loot the place unopposed.",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "''This is my eternal punishment. The Eternal Judges sent me here for the greed of my past life. As is their ways, their justice was doled out with a great sense of cruel irony. I now am stuck with the very things I could not bear to part with in my previous life. You're lucky you did not take any of the items in this place, for I fear that the curse would've then been bestowed to you. Traveler, I ask of you a favor. You are not the first to enter this cursed place, but you are the first to not have fallen under its sway. I believe I can only be set free by one not affected. Please, draw your longsword and end my suffering. In return, the way out of this place shall be opened for you.''  ",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description":"Free him from his curse",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"''You deserve your fate, I'll find my own way out.''",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description":"Kill him, hoping the curse dies with him so you can loot the place unopposed.",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "You unsheathe your blade and thrust into the being as it closes the distance. Instead of a look of shock on the creature's face, there is a look of serenity. ''Thank you....'' he mutters as he falls over dead. Confused, you make your way out of the room. Through a set of double doors you find a long stairwell, and once at the top you are met with the sight of the sun. Your adventure is complete.  ",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description": "",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description": "",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description": "",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "''Good, good! Pledge your life to me mortal, and you shall know such power that no man has ever felt before.'' \n''I pledge my life for Molak-Druth,'' you say obediently. \n''Good my loyal servant, now take that dagger and give me a blood offering.'' You do as he says, cutting along the palm of your left hand and letting the blood drip down onto the altar. The blood itself starts to boil and turn black as it touches the stone. ''Now close your eyes my servant, you soon shall be taken out of this place, and my promise shall be fulfilled.'' All goes black in your vision. Some time passes, and suddenly you are awakened by the sound of fluttering wings and the feel of the cool night air blowing across your face. Your vision returns, and you can see yourself flying in the open sky, your new form illuminated by the moon. You realize the fluttering wings are yours, as you have been transformed into the image of man and beast alike...    ",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description": "",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description": "",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description": "",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "''Ahh, a way out of this place you say,'' the voice growls menacingly. ''You are granted the chance to ask anything of a god, and choose to waste it on something as trivial as that. Very well mortal, you shall have your wish.'' Everything goes black, and you awake to yourself lying in a field of grass under the full moon of the night sky. It seems the dark god held up its end of the bargain, albeit reluctantly. You are lucky to have faced such a thing and come out unscathed.",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description": "",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description": "",
+                "Choice_link": -1
+            },
+            {
+                "Choice_Description": "",
+                "Choice_link": -1
+            }
+        ]
+    },
+    {
+        "Description": "''YOU DARE DEFILE MY SANCTUM WITH YOUR PETTY INSOLENCE!'' the being howls in anger. You feel the ground beneath you start to tremble as the room shakes. A piece of the ceiling dislodges and nearly crushes you, but you dodge out of the way just in time. It seems the god is trying to make this room your tomb. You notice sunlight shining from where the whole in the ceiling dislodged, and scramble up the rubble, using it as a makeshift stairway. Once outside, you hear the angered screams of the being raging and raging. They eventually go silent. YOu fall to the ground exhausted, glad to have escaped with your life. ",
+        "Image_Path": "",
+        "Choices": [
+            {
+                "Choice_Description": "",
+                "Choice_link":-1
+            },
+            {
+                "Choice_Description": "",
+                "Choice_link":-1
+            },
+            {
+                "Choice_Description": "",
+                "Choice_link": -1
+            }
+        ]
     }
+
 
 
 ]
