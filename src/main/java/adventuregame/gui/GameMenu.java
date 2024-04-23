@@ -20,6 +20,7 @@ public class GameMenu extends JComponent {
     }
 
     private JPanel leftPanel;
+
     private JPanel middlePanel;
     private JPanel rightPanel;
     private JPanel bottomPanel;
@@ -51,15 +52,23 @@ public class GameMenu extends JComponent {
         rightPanel = new JPanel(new BorderLayout());
 
         // left portion
+
         leftLabel = new JLabel("       "); // for some space between image and event text
+        leftLabel.setBackground(Color.BLACK);
         leftLabel.setHorizontalAlignment(JLabel.CENTER);
         leftPanel.add(leftLabel, BorderLayout.CENTER);
+        leftPanel.setBackground(Color.BLACK);
+        leftLabel.setBackground(Color.BLACK);
 
         // middle portion
         topTextLabel = new JLabel("<html>Event info text...", SwingConstants.CENTER);
+        topTextLabel.setForeground(Color.white);
+        topTextLabel.setFont(new Font("Malgun Gothic", Font.PLAIN, 16));
         middlePanel.add(topTextLabel, BorderLayout.CENTER);
+        middlePanel.setBackground(Color.BLACK);
 
         bottomPanel = new JPanel(new GridLayout(3, 1)); // for stacking buttons
+        bottomPanel.setBackground(Color.BLACK);
 
         choice1B = new JButton("Choice 1");
         choice2B = new JButton("Choice 2");
@@ -68,6 +77,7 @@ public class GameMenu extends JComponent {
         gameButtonList.add(0, choice1B);
         gameButtonList.add(1, choice2B);
         gameButtonList.add(2, choice3B);
+
 
         Dimension buttonSize = new Dimension(150, 50);
 
@@ -94,13 +104,19 @@ public class GameMenu extends JComponent {
 
         // right portion
         saveB = new JButton("Save (and quit)");
+        saveB.setBackground(Color.gray);
+        saveB.setFont(new Font("Tempus Sans ITC", Font.PLAIN, 14));
         inventoryB = new JButton("Inventory"); // Add an extra button for demonstration
+        inventoryB.setBackground(Color.gray);
+        inventoryB.setFont(new Font("Tempus Sans ITC", Font.PLAIN, 14));
 
         buttonPanel2 = new JPanel(new GridLayout(2, 1, 5, 5));
         buttonPanel2.add(saveB);
         buttonPanel2.add(inventoryB);
+        buttonPanel2.setBackground(Color.black);
 
         rightPanel.add(buttonPanel2, BorderLayout.NORTH);
+        rightPanel.setBackground(Color.BLACK);
 
         saveB.addActionListener(new ActionListener() {
             @Override
@@ -113,6 +129,7 @@ public class GameMenu extends JComponent {
         add(leftPanel, BorderLayout.WEST);
         add(middlePanel, BorderLayout.CENTER);
         add(rightPanel, BorderLayout.EAST);
+
     }
 
     public void setVisibility(boolean b)
@@ -126,8 +143,11 @@ public class GameMenu extends JComponent {
 
         for(int i =0; i < 3; i++)
         {
+
             JButton button = gameButtonList.get(i);
-            button.setText(buttonDescriptions[i]);
+            button.setText("<html>" + buttonDescriptions[i]);
+            button.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 14));
+            button.setBackground(Color.gray);
             button.setToolTipText(buttonDescriptions[i]);
         }
     }
