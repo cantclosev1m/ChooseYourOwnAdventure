@@ -43,7 +43,7 @@ public class GameMenu extends JComponent {
 
     public GameMenu()
     {
-        setSize(800, 600);
+        setSize(1000, 800);
         setLayout(new BorderLayout());
 
         // set up event screen layout

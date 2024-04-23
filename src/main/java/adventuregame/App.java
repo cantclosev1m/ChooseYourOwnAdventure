@@ -149,6 +149,7 @@ public class App
         catch (IOException e){
             System.err.println("Error saving the game" + e.getMessage());
         }
+        System.exit(0);
     }
 
     public static void main( String[] args ) throws Exception
