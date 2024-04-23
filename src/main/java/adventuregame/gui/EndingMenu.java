@@ -50,16 +50,31 @@ public class EndingMenu extends JComponent {
         leftLabel = new JLabel("       "); // for some space between image and event text
         leftLabel.setHorizontalAlignment(JLabel.CENTER);
         leftPanel.add(leftLabel, BorderLayout.CENTER);
+        leftPanel.setBackground(Color.BLACK);
+        leftLabel.setBackground(Color.BLACK);
 
         // middle portion
         topTextLabel = new JLabel("<html>" + endNode.getDescription(), SwingConstants.CENTER);
+        topTextLabel.setForeground(Color.WHITE);
+        topTextLabel.setFont(new Font("Malgun Gothic", Font.PLAIN, 14));
         middlePanel.add(topTextLabel, BorderLayout.CENTER);
+        middlePanel.setBackground(Color.BLACK);
 
         bottomPanel = new JPanel(new GridLayout(3, 1)); // for stacking buttons
+        bottomPanel.setBackground(Color.BLACK);
 
         mainMenuB = new JButton("Go to Main Menu");
+        mainMenuB.setBackground(Color.gray);
+        mainMenuB.setFont(new Font("Tempus Sans ITC", Font.PLAIN, 14));
+
         playAgainB = new JButton("Play again");
+        playAgainB.setBackground(Color.gray);
+        playAgainB.setFont(new Font("Tempus Sans ITC", Font.PLAIN, 14));
+
+
         quitB = new JButton("Quit");
+        quitB.setBackground(Color.gray);
+        quitB.setFont(new Font("Tempus Sans ITC", Font.PLAIN, 14));
         
         // set button actions
         mainMenuB.addActionListener(new ActionListener() {
@@ -98,13 +113,20 @@ public class EndingMenu extends JComponent {
 
         // right portion
         saveB = new JButton("Save (and quit)");
+        saveB.setFont(new Font("Tempus Sans ITC", Font.PLAIN, 14));
+        saveB.setBackground(Color.gray);
+
         inventoryB = new JButton("Inventory"); // Add an extra button for demonstration
+        inventoryB.setFont(new Font("Tempus Sans ITC", Font.PLAIN, 14));
+        inventoryB.setBackground(Color.gray);
 
         buttonPanel2 = new JPanel(new GridLayout(2, 1, 5, 5));
         buttonPanel2.add(saveB);
         buttonPanel2.add(inventoryB);
+        buttonPanel2.setBackground(Color.BLACK);
 
         rightPanel.add(buttonPanel2, BorderLayout.NORTH);
+        rightPanel.setBackground(Color.BLACK);
 
         saveB.addActionListener(new ActionListener() {
             @Override
