@@ -22,14 +22,14 @@
     {
 
         "Description": "Making your way down the left most tunnel, you stumble into a cavern that doesn't appear to have been man made. As your eyes adjust to the darkness, you make out a large, lumbering silhouette charging towards you.The beast's stench can only mean one thing, an ogre. What will you do?",
-        "Image_Path": "Images\\Ogre.png",
+        "Image_Path": "Images\\Ogre_far1.JPG",
         "Choices": [
             {
-                "Choice_Description": "Fight",
+                "Choice_Description": "Attempt to make peace",
                 "Choice_link": 4
             },
             {
-                "Choice_Description": "Attempt to make peace",
+                "Choice_Description": "Fight",
                 "Choice_link": 5
             },
             {
@@ -41,7 +41,7 @@
     },
     {
         "Description": "Walking down the center tunnel, you stumble into a completely dark room. Your eyes strain to perceive what appears to be unlit torches hanging on the walls. You come to realize you are not alone, as the chirping and fluttering of bats begins to fill your ears. How do you react?",
-        "Image_Path": "Images\\Ogre.png",
+        "Image_Path": "Images\\Bats_dark_edited.jpg",
         "Choices": [
             {
                 "Choice_Description": "Light the torches",
@@ -59,7 +59,7 @@
     },
     {
         "Description": "Choosing the right tunnel, you come to a circular chamber. Once within, you make out inane human ramblings coming from a haggard, bloodied adventurer. You step closer to comfort him, yet his mutterings only grow more frenzied. ''Demons are here, demons are here,'' he repeats to himself over and over...",
-        "Image_Path": "Images\\Ogre.png",
+        "Image_Path": "Images\\Crazy1.jpg",
         "Choices": [
             {
                 "Choice_Description": "Talk to him in an attempt to calm him down",
@@ -77,7 +77,7 @@
     },
     {
         "Description": "You throw down your longsword and kneel to the ground as the ogre charges you. Right as it is about to strike you down it pauses, confused at your gesture. Seeing that you don't intend to make yourself a threat, it lets you pass by unharmed. You pass through a small man-sized hole in the cavern into a large vault, with jewels and gold littered throughout the room. Despite the splendor of it all, an air of unease hangs over you. Something is not quite right. What will you do?",
-        "Image_Path": "Images\\Ogre.png",
+        "Image_Path": "Images\\Ogre_confused1.jpg",
         "Choices": [
             {
                 "Choice_Description": "Ignore the uneasy feeling, stuff as much loot as you can into your pack as it can hold",
@@ -96,7 +96,7 @@
     },
     {
         "Description": "As the ogre charges you, you draw your longsword and assume a defensive stance. Right as it is about to barrel into you, you sidestep to the left and swing at its throat. The beast falls over dead. You pass through a small man-sized hole in the cavern into a large vault, with jewels and gold littered throughout the room. Despite the splendor of it all, an air of unease hangs over you. Something is not quite right. What will you do?",
-        "Image_Path": "Images\\Ogre_charging.png",
+        "Image_Path": "Images\\ogre_close2.JPG",
         "Choices": [
             {
                 "Choice_Description": "Ignore the uneasy feeling, stuff as much loot as you can into your pack as it can hold",
@@ -115,7 +115,7 @@
     },
     {
         "Description": "You attempt to run back down the tunnel you came from. Right as you reach the opening, you feel a large hand grip your waist. The ogre picks you up and slams you into the ground repeatedly, until the only thing that remains of you is red paste.",
-        "Image_Path": "Images\\Ogre_death.png",
+        "Image_Path": "Images\\ogre_close2.JPG",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -133,7 +133,7 @@
     },
     {
         "Description": "You take a matchbox from your pack, lighting the nearby torches. The bats begin to stir angrily until the flames scare them away. You make your way out of the room. The frightened bats you fled from suddenly look more appealing than the sight currently in front of you. You are standing in a stone room, lit by candlelight. In the center of the room is an altar, on top of which lays a bloody dagger. Various effigies to some bat-like deity aline the room. You feel a dark presence beckoning you to the knife.",
-        "Image_Path": "Images\\bat_torches.png",
+        "Image_Path": "Images\\Bats_torches.jpg",
         "Choices": [
             {
                 "Choice_Description":"Attempt to speak to the deity",
@@ -172,7 +172,7 @@
     },
     {
         "Description": "You unsheathe your sword, swinging wildly at the bats resting above you. Many are sliced and crushed beneath your blade, but their kin begin to swarm and bite you, until you are overtaken by the mass of screeching black beasts",
-        "Image_Path": "Images\\Monster_swarm.png",
+        "Image_Path": "Images\\Bat_attack1.jpg",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -190,7 +190,7 @@
     },
     {
         "Description": "You calmly approach the man, gesturing that you mean no harm. You inquire about how he got here, yet all he says is, ''Don't let them take me.'' As you get closer, his eyes widen in fear. ''DEMON! DEMON!'' he screams. Before you can calm him down, he draws a knife and slashes his own throat. Shaken from the event you've just witnessed, you quickly leave the room. You enter into a completely pitch black room, yet you sense you're not alone. From within the darkness, you spot a pair of glowing red eyes, and an unnatural, manic sounding voice begins speaking. ''HAH! it seems you have become acquainted with the poor sap who failed my little game... hopefully you fare better. Here's the deal mortal, you answer a series of three riddles correctly, I'll show you the way out of this place. Answer any of them wrong, and you'll end up like our little friend back there. Now, for your first riddle, what is it that fills the sky and the earth, shakes all foundations, but cannot be seen by thine eyes or held in one's hands?'' ",
-        "Image_Path": "Images\\Lone_man.png",
+        "Image_Path": "Images\\Red_eyed_demon1.jpg",
         "Choices": [
             {
                 "Choice_Description":"''Wind''",
@@ -208,7 +208,7 @@
     },
     {
         "Description": "You take a look at the murmuring mess before you and decide it's best not to take chances. You draw your sword and put the man out of his misery with a quick thrust into his chest. Upon exiting the room, you stumble into a pitch black room. Fumbling about and running your hands across the stone walls to gain a sense of direction, you hear a feminine voice call out from within the darkness, and spot the flickering light of a candle. ''Follow the light, weary traveler. I shall show you the way out of this place,'' says the voice. You see the figure of a lady illuminated by the candlelight. ",
-        "Image_Path": "",
+        "Image_Path": "Image\\Maiden1.JPG",
         "Choices": [
             {
                 "Choice_Description": "''What are you doing down here?''",
