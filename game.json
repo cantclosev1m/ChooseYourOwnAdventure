@@ -262,7 +262,7 @@
     },
     {
         "Description": "Even amongst all of the tempting treasure, you're unable to shake the uneasy feeling. As you look around the room, you spot a pale figure watching you intently. The figure is deathly pale, clothed in royal robes of purple, and a gold crown sits atop the overstretched skin on its pale skull. The figure begins to make his way towards you. ",
-        "Image_Path": "",
+        "Image_Path": "Images\\deathly_pale_man_purple_robes.png",
         "Choices": [
             {
                 "Choice_Description":"''What are you?''",
