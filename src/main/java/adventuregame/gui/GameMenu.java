@@ -63,7 +63,7 @@ public class GameMenu extends JComponent {
         // middle portion
         topTextLabel = new JLabel("<html>Event info text...", SwingConstants.CENTER);
         topTextLabel.setForeground(Color.white);
-        topTextLabel.setFont(new Font("Malgun Gothic", Font.PLAIN, 14))
+        topTextLabel.setFont(new Font("Malgun Gothic", Font.PLAIN, 14));
         middlePanel.add(topTextLabel, BorderLayout.CENTER);
         middlePanel.setBackground(Color.BLACK);
 
