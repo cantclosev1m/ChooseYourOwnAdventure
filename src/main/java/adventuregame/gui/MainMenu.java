@@ -77,26 +77,26 @@ public class MainMenu extends JComponent {
         // Add buttons to the buttonPanel
         buttonPanel.setBackground(Color.BLACK);
         buttonPanel.add(nGameB, gbc);
-        nGameB.setBackground(Color.darkGray);
+        nGameB.setBackground(Color.gray);
         nGameB.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 18));
         gbc.gridy++;
 
         buttonPanel.add(lGameB, gbc);
-        lGameB.setBackground(Color.darkGray);
+        lGameB.setBackground(Color.gray);
         lGameB.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 18));
         gbc.gridy++;
 
         buttonPanel.add(achievementsB, gbc);
-        achievementsB.setBackground(Color.darkGray);
+        achievementsB.setBackground(Color.gray);
         achievementsB.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 18));
         gbc.gridy++;
 
         buttonPanel.add(settingsB, gbc);
-        settingsB.setBackground(Color.darkGray);
+        settingsB.setBackground(Color.gray);
         settingsB.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 18));
         gbc.gridy++;
         buttonPanel.add(quitB, gbc);
-        quitB.setBackground(Color.darkGray);
+        quitB.setBackground(Color.gray);
         quitB.setFont(new Font("Tempus Sans ITC", Font.ITALIC, 18));
 
 
