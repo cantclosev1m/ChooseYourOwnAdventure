@@ -171,13 +171,4 @@ public class Graph {
 
         return selectedChoice.second;
     }
-
-    public static void main(String[] args) {
-        try {
-            Graph myGraph = new Graph("game.json");
-            myGraph.initialize();  
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }
