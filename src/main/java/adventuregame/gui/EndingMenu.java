@@ -37,6 +37,12 @@ public class EndingMenu extends JComponent {
     public Event<Void> playAgain = new BindableEvent<>();
     public Event<Void> goToMM = new BindableEvent<>();
     
+    public EndingMenu() { } // for initial purposes
+    public EndingMenu(Event<Void> pA, Event<Void> gTMM)
+    {
+        playAgain = pA;
+        goToMM = gTMM;
+    }
     public void create() {
         setSize(800, 600);
         setLayout(new BorderLayout());

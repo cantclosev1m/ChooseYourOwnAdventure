@@ -9,7 +9,7 @@ import javax.swing.*;
 import adventuregame.gui.MainMenu;
 import adventuregame.gui.EndingMenu;
 import adventuregame.util.WindowService;
-
+import adventuregame.util.Event;
 /**
  * Hello world!
  *
@@ -97,6 +97,11 @@ public class App
                 
                 endMenu.playAgain.Connect((Void) -> {
                     try {
+                        Event<Void> tempPlayAgain = endMenu.playAgain;
+                        Event<Void> tempGTMM = endMenu.goToMM;
+                        
+                        endMenu = null;
+                        endMenu = new EndingMenu(tempPlayAgain, tempGTMM);
                         startGame();
                     } catch (IOException e) {
                         throw new RuntimeException(e);
