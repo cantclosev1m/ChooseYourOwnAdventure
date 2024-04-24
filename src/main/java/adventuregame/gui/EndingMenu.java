@@ -44,6 +44,7 @@ public class EndingMenu extends JComponent {
         goToMM = gTMM;
     }
     public void create() {
+        removeAll();
         setSize(800, 600);
         setLayout(new BorderLayout());
 
