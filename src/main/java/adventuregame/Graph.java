@@ -141,14 +141,12 @@ public class Graph {
             ArrayList<Pair<Choice, Node>> graphConnections = new ArrayList<>();
             for (Choice choice : n.Choices) {
                 int index = choice.getChoiceLink();
-                System.out.println(index);
 
                 if (index == -1) {
                     Pair<Choice, Node> choiceNodePair = new Pair<>(choice, null);
                     graphConnections.add(choiceNodePair);
                     continue;
                 }
-
 
                 Node nodeLink = nodeList.get(index);
                 Pair<Choice, Node> choiceNodePair = new Pair<>(choice, nodeLink);
@@ -165,10 +163,6 @@ public class Graph {
      * Gives the next node in the adjencencyList
      */
     public Node nextNode(Node currentNode, int choiceIndex) {
-        System.out.println(currentNode);
-        System.out.println(choiceIndex);
-        System.out.println("\n");
-
         ArrayList<Pair<Choice, Node>> choices = adjacencyList.get(currentNode);
         if (choiceIndex < 0 || choiceIndex >= choices.size()) {
             throw new IllegalArgumentException("Invalid choice index");

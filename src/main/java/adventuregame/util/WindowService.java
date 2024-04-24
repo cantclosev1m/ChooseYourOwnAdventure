@@ -15,7 +15,7 @@ public class WindowService extends JFrame {
     public WindowService() {
         this.cardLayout = new CardLayout();
         this.getContentPane().setLayout(cardLayout);
-        setSize(900, 700);
+        setSize(975, 715);
         setLocationRelativeTo(null); // Center the window
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("ChooseYourOwnAdventure!");

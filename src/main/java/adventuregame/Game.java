@@ -50,10 +50,11 @@ public class Game{
         initConnections();
     }
 
-    public Game(WindowService windowService, String saveDataFile)
+    public Game(WindowService windowService, String saveDataFile, EndingMenu eMenu)
     {
         try{
             windowingService = windowService;
+            endMenu = eMenu;
 
             FileInputStream fis = new FileInputStream(saveDataFile);
             ObjectInputStream ois = new ObjectInputStream(fis);
@@ -69,6 +70,7 @@ public class Game{
             gameGraph.initialize();
 
             currentNode  = gameGraph.getNodeFromReference(currentNodeReference);
+            System.out.println(currentNode);
 
             setMenuInterface();
             gameMenu.setVisibility(true);
@@ -161,7 +163,7 @@ public class Game{
         String checkDesc = choices.get(0).getDescription();
         endMenu.endNode = n;
         
-        if(checkDesc.length() == 0)
+        if(checkDesc.isEmpty())
         {
             endMenu.create();
             windowingService.registerComponent(endMenu);

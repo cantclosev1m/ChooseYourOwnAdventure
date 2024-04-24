@@ -129,7 +129,7 @@ public class App
      * Function responsible for loading previous instance of game
      */
     public void loadGame() throws IOException {
-        Game game = new Game(windowingService, saveFile);
+        Game game = new Game(windowingService, saveFile, endMenu);
         game.onGameEnd.Connect(onGameEndEvent -> {
             saveGame(onGameEndEvent.getSavedNode());
         });
