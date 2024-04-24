@@ -76,8 +76,8 @@
         ]
     },
     {
-        "Description": "You throw down your longsword and kneel to the ground as the ogre charges you. Right as it is about to strike you down it pauses, confused at your gesture. Seeing that you don't intend to make yourself a threat, it lets you pass by unharmed. You pass through a small man-sized hole in the cavern into a large vault, with jewels and gold littered throughout the room. Despite the splendor of it all, an air of unease hangs over you. Something is not quite right. What will you do?",
-        "Image_Path": "Images\\Ogre_confused1.jpg",
+        "Description": "You throw down your longsword and kneel to the ground as the ogre charges you. Right as it is about to strike you down it pauses, confused at your gesture. Seeing that you don't intend to make yourself a threat, it lets you pass by unharmed. You pass through a small man-sized hole in the cavern into a large room, with jewels and gold littered throughout the room. Despite the splendor of it all, an air of unease hangs over you. Something is not quite right. What will you do?",
+        "Image_Path": "Images\\Loot_room1.jpg",
         "Choices": [
             {
                 "Choice_Description": "Ignore the uneasy feeling, stuff as much loot as you can into your pack as it can hold",
@@ -95,8 +95,8 @@
         ]
     },
     {
-        "Description": "As the ogre charges you, you draw your longsword and assume a defensive stance. Right as it is about to barrel into you, you sidestep to the left and swing at its throat. The beast falls over dead. You pass through a small man-sized hole in the cavern into a large vault, with jewels and gold littered throughout the room. Despite the splendor of it all, an air of unease hangs over you. Something is not quite right. What will you do?",
-        "Image_Path": "Images\\ogre_close2.JPG",
+        "Description": "As the ogre charges you, you draw your longsword and assume a defensive stance. Right as it is about to barrel into you, you sidestep to the left and swing at its throat. The beast falls over dead. You pass through a small man-sized hole in the cavern into a large room, with jewels and gold littered throughout the room. Despite the splendor of it all, an air of unease hangs over you. Something is not quite right. What will you do?",
+        "Image_Path": "Images\\Loot_room1.jpg",
         "Choices": [
             {
                 "Choice_Description": "Ignore the uneasy feeling, stuff as much loot as you can into your pack as it can hold",
@@ -190,7 +190,7 @@
     },
     {
         "Description": "You calmly approach the man, gesturing that you mean no harm. You inquire about how he got here, yet all he says is, ''Don't let them take me.'' As you get closer, his eyes widen in fear. ''DEMON! DEMON!'' he screams. Before you can calm him down, he draws a knife and slashes his own throat. Shaken from the event you've just witnessed, you quickly leave the room. You enter into a completely pitch black room, yet you sense you're not alone. From within the darkness, you spot a pair of glowing red eyes, and an unnatural, manic sounding voice begins speaking. ''HAH! it seems you have become acquainted with the poor sap who failed my little game... hopefully you fare better. Here's the deal mortal, you answer a series of three riddles correctly, I'll show you the way out of this place. Answer any of them wrong, and you'll end up like our little friend back there. Now, for your first riddle, what is it that fills the sky and the earth, shakes all foundations, but cannot be seen by thine eyes or held in one's hands?'' ",
-        "Image_Path": "Images\\Red_eyed_demon1.jpg",
+        "Image_Path": "Images\\Demon2.jpg",
         "Choices": [
             {
                 "Choice_Description":"''Wind''",
@@ -208,7 +208,7 @@
     },
     {
         "Description": "You take a look at the murmuring mess before you and decide it's best not to take chances. You draw your sword and put the man out of his misery with a quick thrust into his chest. Upon exiting the room, you stumble into a pitch black room. Fumbling about and running your hands across the stone walls to gain a sense of direction, you hear a feminine voice call out from within the darkness, and spot the flickering light of a candle. ''Follow the light, weary traveler. I shall show you the way out of this place,'' says the voice. You see the figure of a lady illuminated by the candlelight. ",
-        "Image_Path": "Image\\Maiden1.JPG",
+        "Image_Path": "Images\\Woman1.jpg",
         "Choices": [
             {
                 "Choice_Description": "''What are you doing down here?''",
@@ -244,7 +244,7 @@
     },
     {
         "Description": "You start stuffing the loot into your pack. Rifling through the the treasure, you find jewel-encrusted daggers, gems, fancy goblets, and the like. Your pack doesn't seem to ever get full, despite spending what feels like hours looting through the treasure. Out of the corner of your eye you spot a pale humanoid figure watching you. The figure is seemingly hairless, clothed in purple robes befitting of royalty, with a golden crown sitting atop its misshapen skull. The figure makes its way towards you. ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Lich+king_face1.jpg",
         "Choices": [
             {
                 "Choice_Description":"Offer to put the treasure back",
@@ -262,7 +262,7 @@
     },
     {
         "Description": "Even amongst all of the tempting treasure, you're unable to shake the uneasy feeling. As you look around the room, you spot a pale figure watching you intently. The figure is deathly pale, clothed in royal robes of purple, and a gold crown sits atop the overstretched skin on its pale skull. The figure begins to make his way towards you. ",
-        "Image_Path": "Images\\deathly_pale_man_purple_robes.png",
+        "Image_Path": "Images\\Lich+king_face1.jpg",
         "Choices": [
             {
                 "Choice_Description":"''What are you?''",
@@ -280,7 +280,7 @@
     },
     {
         "Description": "You begin to make your way to the double doors across the treasure room, with the loot crunching under foot. As your hand grasps the handle to open the doors, you feel an icy presence run along the back of your neck. You tentatively turn around, and are greeted with the visage of a pale, undead humanoid inches from your face. The figure is clothed in purple robes, and a crown sits atop its hairless skull.",
-        "Image_Path": "",
+        "Image_Path": "Images\\Lich_king_somber1.jpg",
         "Choices": [
             {
                 "Choice_Description":"''What are you?''",
@@ -316,7 +316,7 @@
     },
     {
         "Description": "You give in to the presence urging you towards the altar. Once there, you pick up the blood soaked dagger, though you are no longer in control of your actions. Detached from your own self, you observe that the dagger's blade is twisted and curved in an odd, exotic way. ''My life for Molak-Durth'', you say, yet the voice is not your own. It matters little, as you plunge the blade into your chest, and all goes black...  ",
-        "Image_Path": "Images\\Fantasy_altar.png",
+        "Image_Path": "Images\\Bloody_dagger.jpg",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -352,7 +352,7 @@
     },
     {
         "Description": "''You're not as dumb as you look, sadly... Anyways, you've got two more to go. What is it that speaks in all languages, yet is silent when it rests, and is deaf for all its life?''",
-        "Image_Path": "",
+        "Image_Path": "Images\\Demon2.jpg",
         "Choices": [
             {
                 "Choice_Description":"''A snake''",
@@ -371,7 +371,7 @@
     },
     {
         "Description": "The being doesn't respond, and you can feel the tension within the silence. Suddenly, you see a flash of claws and fangs emerge from the darkness as you feel sharp pain throughout your body, and all goes black...",
-        "Image_Path": "",
+        "Image_Path": "Images\\Demon_attack1.jpg",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -389,7 +389,7 @@
     },
     {
         "Description": "The word has barely finished leaving your mouth before the being launches itself from the darkness, claws outstretched in a frenzy of ripping and tearing. That would be the last image you would ever see...",
-        "Image_Path": "",
+        "Image_Path": "Images\\Demon_attack1.jpg",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -407,7 +407,7 @@
     },
     {
         "Description": "''I am no mere maiden. I have been cursed to walk this place to my dying day, guiding wayward souls like you out of this dark place,'' the lady responds. You follow her lead through the tunnels of the labyrinth for what feels like ages, until you arrive at an underground pond, the water crystal clear and shimmering. The lady stops at the foot of the pond, staring at her reflection. You walk up to her left shoulder, taking a moment to glance at your own reflection, your face covered in grime and dirt, nearly unrecognizable from your time in this place. You then notice the lady's reflection, of which there is something deeply wrong with. Her face seems to be contorting and shifting inhumanly, as if something was trying to break free out of her face. She, or rather it, begins to shake with laughter. ''Did you actually think I was leading you out of this place? HA! You killed that poor fool blabbering about a demon, and you didn't find it odd there was nothing but a woman in the next room? You honestly deserve what I'm going to do you,'' the creature tells you, shifting its form in front of your very eyes. It grabs you by the nape with inhumanly strong hands and plunges your face into the water below. You struggle, but you lack the strength to break free. Water begins to fill your lungs. Though submerged in the water, you can still hear the being's maniacal laughter as your life fades...  ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Demon_reflection1.jpg",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -425,7 +425,7 @@
     },
     {
         "Description": "''I do not know the true nature of this labyrinth, I barely know the true nature of myself. For as long as I can remember, I've been wandering this place. On random chance I'll encounter travelers such as yourself, but they always seem to meet grizzly ends, such as the man you killed back there.'' You stand still in shock, how could she know about the man you killed? Sensing your discomfort, the lady stops in her tracks and begins to laugh uncontrollably. ''What? Did you think I didn't know? What demon do you think he was raving about? You just thought you would be saved by some fair maiden after showing no such mercy yourself... fate has a cruel sense of justice, not that I've ever been one for the concept of justice.'' The lady turns to face you, what was once her face now contorted in an inhumanly long grin, with teeth sharp as knives glistening in the candle light. You rush to draw your sword, but before it can be unsheathed the being is on top of you, and your death is swiftly dispatched.",
-        "Image_Path": "",
+        "Image_Path": "Images\\Demon_lady1.jpg",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -443,7 +443,7 @@
     },
     {
         "Description": "You silently trudge along, following the the path illuminated by the lady. ''No words of thanks for guiding you out of this place? Seems befitting of one who would oh so cruelly kill that poor lunatic back there.'' The lady stops in her tracks and begins laughing. ''Not only are you an ingrate, you're also a fool. Was it really the wisest course of action to follow some random lady after just meeting a man rambling about demons? You're as dumb as you are cruel.'' The lady's form starts shifting into some grotesque mockery of the human figure, and before you can react the demon is charging you, claws outstretched. You fumble around, reaching for your weapon, but you are too late. The demon is on top of you, and the last thing you see is the gnashing of bloody teeth and claws swinging down at you.",
-        "Image_Path": "",
+        "Image_Path": "Images\\Demon_lady1.jpg",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -461,7 +461,7 @@
     },
     {
         "Description": "You begin dumping the loot from your pack to appease the being as it walks closer to you. Instead of a look of anger, the being seems to pity you. ''It is too late for that young one. By taking the wealth held within this accursed place, you have allowed it to take a part of you. I have wandered this place for an uncountable number of years as punishment for the greed of my mortal life.'' ''What do you mean it has taken a part of me?'' you inquire. ''I was once the ruler of the Kingdom of Fiann. I concerned myself with unnecessary celebrations, feasts, and the construction of gaudy statues honoring myself. In the latter days of my reign, the enemies of our kingdom had formed a temporary alliance to wage a war of our destruction. There was little I as king could do, but I disgraced myself in my final moments. While our enemies were battering down the gates of our capital, I secluded myself inside the royal vault, unable to part with my wealth. I met my end as a coward, and for my avarice, the Eternal Judges deemed this my punishment. I fear you and I shall share the same fate now...''. You refuse to believe this being's claims, and rush towards the double doors of the room. You attempt to pull the doors open, yet you can't get them open. You look back to where you entered the room, yet the opening is no longer there... ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Lich_king_somber1.jpg",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -479,7 +479,7 @@
     },
     {
         "Description": "You draw your longsword and charge the being. As you thrust into the creature's gut, your sword passes through nothing but air. The being looks at you, almost as if he's amused. ''I'm sorry young one, that's not going to work. I'm cursed to walk this place as punishment for my greed in life, and you my friend have met the same fate by taking these accursed trinkets into your possession. You shall be damned to linger here evermore, just as I am.'' Believing the being to be bluffing, you turn your back to him and head towards the gaudy double doors marking the exit to this place. You attempt to open them, but they remain steadfast in their place. You think of going back the way you entered, but the hole you passed through is no longer open. Horror sets in as you realize the spirit was telling the truth... ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Lich_king_somber1.jpg",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -497,7 +497,7 @@
     },
     {
         "Description": "''In a past life, I went by Raemon the Third, King of Fiann. I'm sure enough time has passed that those words mean nothing to you. You may be wondering what is a king doing in such a place. Well, this is my eternal punishment. In the last days of my reign, and consequently the last days of the kingdom, we were beset on all fronts by enemies who sought our destruction. As the hordes broke down the gates to our capital city Laenor, I sequestered myself inside the royal vault. Fearing the loss of my royal wealth more than I cared for my subjects or my kingdom. Now I am stuck with the things I feared to part with most for all eternity. That curse has now befallen you, since you regretfully decided to loot this place. I'm sorry that it came to this.'' Horror sets in as you realize the spirit was telling the truth.  ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Lich_king_somber1.jpg",
         "Choices": [
             {
                 "Choice_Description":"",
@@ -515,7 +515,7 @@
     },
     {
         "Description": "''In a past life, I went by Raemon the Third, King of Fiann. I'm sure enough time has passed that those words mean nothing to you. You may be wondering what is a king doing in such a place. Well, this is my eternal punishment. In the last days of my reign, and consequently the last days of the kingdom, we were beset on all fronts by enemies who sought our destruction. As the hordes broke down the gates to our capital city Laenor, I sequestered myself inside the royal vault. Fearing the loss of my royal wealth more than I cared for my subjects or my kingdom, I died a coward. Our foes found me and dealt with me as you would expect, and the Eternal Judges cursed me to this place. You're lucky you did not take any of the items in this place, for I fear that the curse would've then been bestowed to you. Traveler, I ask of you a favor. You are not the first to enter this cursed place, but you are the first to not have fallen under its sway. I believe I can only be set free by one not affected. Please, draw your longsword and end my suffering. In return, the way out of this place shall be opened for you.'' ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Lich_king_somber1.jpg",
         "Choices": [
             {
                 "Choice_Description":"Free him from his curse",
@@ -533,7 +533,7 @@
     },
     {
         "Description": "''This is my eternal punishment. The Eternal Judges sent me here for the greed of my past life. As is their ways, their justice was doled out with a great sense of cruel irony. I now am stuck with the very things I could not bear to part with in my previous life. You're lucky you did not take any of the items in this place, for I fear that the curse would've then been bestowed to you. Traveler, I ask of you a favor. You are not the first to enter this cursed place, but you are the first to not have fallen under its sway. I believe I can only be set free by one not affected. Please, draw your longsword and end my suffering. In return, the way out of this place shall be opened for you.''  ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Lich_king_somber1.jpg",
         "Choices": [
             {
                 "Choice_Description":"Free him from his curse",
@@ -551,7 +551,7 @@
     },
     {
         "Description": "You unsheathe your blade and thrust into the being as it closes the distance. Instead of a look of shock on the creature's face, there is a look of serenity. ''Thank you....'' he mutters as he falls over dead. Confused, you make your way out of the room. Through a set of double doors you find a long stairwell, and once at the top you are met with the sight of the sun. Your adventure is complete.  ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Lich_king_death1.jpg",
         "Choices": [
             {
                 "Choice_Description": "",
@@ -569,7 +569,7 @@
     },
     {
         "Description": "''Good, good! Pledge your life to me mortal, and you shall know such power that no man has ever felt before.'' ''I pledge my life for Molak-Druth,'' you say obediently. ''Good my loyal servant, now take that dagger and give me a blood offering.'' You do as he says, cutting along the palm of your left hand and letting the blood drip down onto the altar. The blood itself starts to boil and turn black as it touches the stone. ''Now close your eyes my servant, you soon shall be taken out of this place, and my promise shall be fulfilled.'' All goes black in your vision. Some time passes, and suddenly you are awakened by the sound of fluttering wings and the feel of the cool night air blowing across your face. Your vision returns, and you can see yourself flying in the open sky, your new form illuminated by the moon. You realize the fluttering wings are yours, as you have been transformed into the image of man and beast alike...    ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Man_bat1.jpg",
         "Choices": [
             {
                 "Choice_Description": "",
@@ -587,7 +587,7 @@
     },
     {
         "Description": "''Ahh, a way out of this place you say,'' the voice growls menacingly. ''You are granted the chance to ask anything of a god, and choose to waste it on something as trivial as that. Very well mortal, you shall have your wish.'' Everything goes black, and you awake to yourself lying in a field of grass under the full moon of the night sky. It seems the dark god held up its end of the bargain, albeit reluctantly. You are lucky to have faced such a thing and come out unscathed.",
-        "Image_Path": "",
+        "Image_Path": "Images\\waking_up_moonlight.png",
         "Choices": [
             {
                 "Choice_Description": "",
@@ -605,7 +605,7 @@
     },
     {
         "Description": "''YOU DARE DEFILE MY SANCTUM WITH YOUR PETTY INSOLENCE!'' the being howls in anger. You feel the ground beneath you start to tremble as the room shakes. A piece of the ceiling dislodges and nearly crushes you, but you dodge out of the way just in time. It seems the god is trying to make this room your tomb. You notice sunlight shining from where the whole in the ceiling dislodged, and scramble up the rubble, using it as a makeshift stairway. Once outside, you hear the angered screams of the being raging and raging. They eventually go silent. YOu fall to the ground exhausted, glad to have escaped with your life. ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Fantasy_altar.png",
         "Choices": [
             {
                 "Choice_Description": "",
@@ -623,7 +623,7 @@
     },
     {
         "Description": "''Pathetic...'' the creature hisses hatefully. Before you can prepare yourself for battle, you're overtaken by a frenzied blur of slashing claws and biting teeth... ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Demon_attack1.jpg",
         "Choices": [
             {
                 "Choice_Description": "",
@@ -642,7 +642,7 @@
 
     {
         "Description": "The creature sighs loudly, clearly exasperated. ''You're not making this any fun by getting these questions right. You damnable humans never cease to ruin my day. Here's the last riddle, what is it that is a voracious eater, yet has no mouth or maw, yet daily makes beasts and trees its bread. When fed it thrives, but given water and it shall surely die.'' ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Demon2.jpg",
         "Choices": [
             {
                 "Choice_Description": "''Drought''",
@@ -660,7 +660,7 @@
     },
     {
         "Description": "''Nice Work! You've made this place your tomb through your idiocy,'' the creature replies, half laughing and half hissing. Before you can prepare to defend yourself, the creature leaps from the shadows and makes you into mincemeat. ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Demon_attack1.jpg",
         "Choices": [
             {
                 "Choice_Description": "",
@@ -678,7 +678,7 @@
     },
     {
         "Description": "You draw your blade and look into the eyes of the cursed man in front of you. In his expression, you see he wears the years of torment on his face. This is his chance to be free. You thrust the blade into his sternum, and he whispers his gratitude, barely audible. He fades from existence before your very eyes. Right at that moment, the double doors marking the exit of this place swing open forcefully, revealing a long staircase leading to the surface. You make your ascent out of this labyrinth. ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Lich_king_death1.jpg",
         "Choices": [
             {
                 "Choice_Description": "",
@@ -696,7 +696,7 @@
     },
     {
         "Description": "He looks at you with an indescribable sadness. ''It's what I deserve...'' he mutters. You find a set of double doors marking the exit of this place, and once opened they reveal a long stairway leading to the surface. You make your ascent out of the labyrinth, leaving the solemn man behind. ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Lich_king_somber1.jpg",
         "Choices": [
             {
                 "Choice_Description": "",
@@ -714,7 +714,7 @@
     },
     {
         "Description": "You fulfill the man's wish, thrusting your blade into his sternum. He fades out of existence before your very eyes, nothing left to suggest he ever even existed. You greedily begin looting the place, as a mad lust for gold and wealth take over you. Suddenly, you're not concerned with leaving this place, because why would you ever want to leave? ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Greed1.jpg",
         "Choices": [
             {
                 "Choice_Description": "",
@@ -732,7 +732,7 @@
     },
     {
         "Description": "The being whistles loudly in a mocking tone before letting out an ear-rending screech. It lurches out of the shadows, claws outstretched, and you're dead before you can even react. ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Demon_attack1.jpg",
         "Choices": [
             {
                 "Choice_Description": "",
@@ -750,7 +750,7 @@
     },
     {
         "Description": "''Wrong.'' The demon lurches from the shadows, fangs aimed directly at your neck. Your blood is spurting out the gaping wound in your neck, and your vision begins turning black... ",
-        "Image_Path": "",
+        "Image_Path": "Images\\Demon_attack1.jpg",
         "Choices": [
             {
                 "Choice_Description": "",
@@ -768,7 +768,7 @@
     },
     {
     "Description": "''Damnit all,'' the being mutters to himself. ''Don't say I don't keep my word.'' It lurches out of the shadows, claws outstretched. Before you can react, your vision turns black. You come to some unknown time later, and you're immediately surprised by the light of the sun beaming down upon your face. You check yourself for injuries, and you seem fine save for the bruising around your neck. Looks like whatever that creature was, it held up its end of the bargain.",
-    "Image_Path": "",
+    "Image_Path": "Images\\waking_up.png",
     "Choices": [
     {
         "Choice_Description": "",
