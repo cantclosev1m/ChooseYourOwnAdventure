@@ -14,6 +14,11 @@ import adventuregame.util.Event;
  * Hello world!
  *
  */
+
+/**
+ * The main application class for an adventure game.
+ * This class sets up the game environment, handles the game lifecycle, including starting, saving, and loading games.
+ */
 public class App
 {
     /**
@@ -24,6 +29,11 @@ public class App
     private WindowService windowingService;
     private MainMenu mainMenu;
     private EndingMenu endMenu;
+
+    /**
+    *Sets the default theme for the program
+    *@throws UnsupportedLookAndFeelException When the theme is unable to be accepted
+    */
     private static void setDefaultTheme() throws UnsupportedLookAndFeelException {
 
         // Should be separated from App class, but oh well
@@ -52,7 +62,10 @@ public class App
         }
 
     }
-
+    /**
+    *Constructor for the App class which initializes the UI components and services.
+    *@throws UnsupportedLookAndFeelException If the specified look and feel cannot be used
+    */
     public App() throws UnsupportedLookAndFeelException {
         setDefaultTheme();
         mainMenu = new MainMenu();
@@ -61,7 +74,9 @@ public class App
         windowingService.registerComponent(mainMenu);
         startApp();
     }
-
+    /**
+    * Starts the application by setting up the main menu and its interactions.
+    */
     public void startApp()
     {
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -114,7 +129,10 @@ public class App
             }
         });
     }
-
+    /**
+    *Starts a new game session.
+    *@throws IOException If an input/output error occurs
+    */
     public void startGame() throws IOException {
         Game game = new Game(windowingService, endMenu);
         game.onGameEnd.Connect(onGameEndEvent -> {
@@ -132,6 +150,7 @@ public class App
 
     /**
      * Function responsible for loading previous instance of game
+     *@throws IoException if file I/O encounters error 
      */
     public void loadGame() throws IOException {
         Game game = new Game(windowingService, saveFile, endMenu);
@@ -142,6 +161,7 @@ public class App
 
     /**
      * Function responsible for saving game instance
+     * @param savedNode Position of game to be saved
      */
     public void saveGame(Graph.Node savedNode)
     {
@@ -156,7 +176,11 @@ public class App
         }
         System.exit(0);
     }
-
+    /**
+    * Main entry point for the application.
+    * @param args Command line arguments (not used)
+    * @throws Exception If an error occurs during initialization
+    */
     public static void main( String[] args ) throws Exception
     {
         App application = new App();

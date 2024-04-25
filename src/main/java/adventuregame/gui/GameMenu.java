@@ -11,8 +11,14 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents the interactive game menu where players make choices that affect the game's progression.
+ */
 public class GameMenu extends JComponent {
 
+    /**
+     * Interface defining the event that occurs when a game menu button is clicked.
+     */
     public interface GameButtonClickEvent
     {
         int buttonNumber = 0;
@@ -41,6 +47,9 @@ public class GameMenu extends JComponent {
     public Event<Void> onGameSave = new BindableEvent<>();
 
 
+    /**
+     * Constructs the game menu and initializes the UI components.
+     */
     public GameMenu()
     {
         setSize(1000, 800);
@@ -132,11 +141,19 @@ public class GameMenu extends JComponent {
 
     }
 
+    /**
+     * Sets the visibility of this game menu component.
+     * @param visible true to make the component visible; false otherwise.
+     */
     public void setVisibility(boolean b)
     {
         setVisible(b);
     }
 
+    /**
+     * Updates the descriptions on the game buttons based on the provided descriptions.
+     * @param buttonDescriptions Array of descriptions for the buttons.
+     */
     public void massSetButtonListDesc(String[] buttonDescriptions)
     {
         assert (buttonDescriptions.length == 3) : "Description list must be of length 3";
@@ -152,12 +169,20 @@ public class GameMenu extends JComponent {
         }
     }
 
+    /**
+     * Updates the event description text at the top of the game menu.
+     * @param description The new description text.
+     */
     public void setEventDescription(String description)
     {
         topTextLabel.setText("<html>" + description);
     }
 
 
+    /**
+     * Sets an image as the background or a prominent feature within the game menu.
+     * @param imagePath Path to the image file.
+     */
     public void setImage (String imagePath)
     {
         ImageIcon imageIcon = new ImageIcon(imagePath);
