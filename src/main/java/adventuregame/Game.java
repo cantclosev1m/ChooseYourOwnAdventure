@@ -86,12 +86,13 @@ public class Game{
             gameGraph.initialize();
 
             currentNode  = gameGraph.getNodeFromReference(currentNodeReference);
-            System.out.println(currentNode);
+            //System.out.println(currentNode);
 
             setMenuInterface();
             gameMenu.setVisibility(true);
             updateGameState();
             initConnections();
+            checkGameOver(currentNode);
         }
         catch (IOException | ClassNotFoundException e)
         {
@@ -112,6 +113,15 @@ public class Game{
         };
         gameMenu.onGameButtonClick.Connect(buttonClickListener);
         gameMenu.onGameSave.Connect((Void) -> {
+            onGameEnd.Fire(new onGameEndEvent() {
+                @Override
+                public Graph.Node getSavedNode() {
+                    return currentNode;
+                }
+            });
+        });
+        endMenu.onGameButtonClick.Connect(buttonClickListener);
+        endMenu.onGameSave.Connect((Void) -> {
             onGameEnd.Fire(new onGameEndEvent() {
                 @Override
                 public Graph.Node getSavedNode() {
