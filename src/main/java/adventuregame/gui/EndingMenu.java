@@ -12,6 +12,10 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 
+/**
+ * Represents the ending menu in an adventure game, providing options to restart the game, return to the main menu, or quit.
+ * It also handles saving and viewing the inventory.
+ */
 public class EndingMenu extends JComponent {
     private JPanel leftPanel;
     private JPanel middlePanel;
@@ -36,13 +40,26 @@ public class EndingMenu extends JComponent {
     
     public Event<Void> playAgain = new BindableEvent<>();
     public Event<Void> goToMM = new BindableEvent<>();
-    
-    public EndingMenu() { } // for initial purposes
+
+    /**
+     * Default constructor used for initial purposes.
+     */
+    public EndingMenu() { }
+
+    /**
+     * Constructor for initializing with specific events for play again and go to main menu functionalities.
+     * @param pA The event to fire when "Play Again" is triggered.
+     * @param gTMM The event to fire when "Go To Main Menu" is triggered.
+     */
     public EndingMenu(Event<Void> pA, Event<Void> gTMM)
     {
         playAgain = pA;
         goToMM = gTMM;
     }
+
+    /**
+     * Creates and arranges all UI components within the ending menu.
+     */
     public void create() {
         setSize(800, 600);
         setLayout(new BorderLayout());
@@ -148,12 +165,20 @@ public class EndingMenu extends JComponent {
         add(middlePanel, BorderLayout.CENTER);
         add(rightPanel, BorderLayout.EAST);
     }
-    
+
+    /**
+     * Sets the visibility of this component.
+     * @param visible true to make the component visible; false otherwise.
+     */
     public void setVisibility(boolean b)
     {
         setVisible(b);
     }
 
+    /**
+     * Updates the descriptions on the game buttons based on the provided descriptions.
+     * @param buttonDescriptions Array of descriptions for the buttons.
+     */
     public void massSetButtonListDesc(String[] buttonDescriptions)
     {
         assert (buttonDescriptions.length == 3) : "Description list must be of length 3";
@@ -166,11 +191,19 @@ public class EndingMenu extends JComponent {
         }
     }
 
+    /**
+     * Updates the event description text.
+     * @param description The new description text.
+     */
     public void setEventDescription(String description)
     {
         topTextLabel.setText("<html>" + description);
     }
 
+    /**
+     * Loads an image related to the current node into the ending menu.
+     * @param currentNode The node whose image to load.
+     */
     public void loadImage(Graph.Node currentNode) {
         String imagePath = currentNode.getImagePath();
         if (imagePath != null && !imagePath.isEmpty()) {
@@ -179,6 +212,11 @@ public class EndingMenu extends JComponent {
             setImage(null);
         }
     }
+
+    /**
+     * Sets the image on the left panel.
+     * @param imagePath Path to the image file.
+     */
     public void setImage (String imagePath)
     {
         ImageIcon imageIcon = new ImageIcon(imagePath);
