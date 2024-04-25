@@ -14,8 +14,14 @@ import java.util.function.Consumer;
 
 import java.awt.Point;
 
-public class Game{
 
+/**
+* The main class responsible for managing the game logic and interactions in the adventure game.
+*/
+public class Game{
+    /**
+     * Interface to handle events when the game ends, providing access to the saved game node.
+     */
     public interface onGameEndEvent
     {
         Graph.Node getSavedNode();
@@ -29,7 +35,12 @@ public class Game{
 
     public Event<onGameEndEvent> onGameEnd = new BindableEvent<onGameEndEvent>();
     public Consumer<GameMenu.GameButtonClickEvent> buttonClickListener;
-
+    /**
+     * Constructor for Game class to initiate a new game session.
+     * @param windowService The service for managing GUI window components.
+     * @param eMenu The menu to be displayed at the end of the game.
+     * @throws IOException If there is an error in reading graph configuration.
+     */
     public Game(WindowService windowService, EndingMenu eMenu) throws IOException {
         windowingService = windowService;
         endMenu = eMenu;
@@ -49,7 +60,12 @@ public class Game{
         updateGameState();
         initConnections();
     }
-
+    /**
+     * Constructor for loading a game session from saved data.
+     * @param windowService The service for managing GUI window components.
+     * @param saveDataFile The file path where game data is saved.
+     * @param eMenu The menu to be displayed at the end of the game.
+     */
     public Game(WindowService windowService, String saveDataFile, EndingMenu eMenu)
     {
         try{
@@ -82,7 +98,9 @@ public class Game{
             System.err.println("Error loading the game" + e.getMessage());
         }
     }
-
+    /**
+     * Initializes connections and event handlers for game button clicks and game save events.
+     */
     private void initConnections()
     {
         buttonClickListener = new Consumer<GameMenu.GameButtonClickEvent>() {
@@ -103,7 +121,9 @@ public class Game{
         });
 
     }
-
+    /**
+     * Sets up the menu interface based on the current game state.
+     */
     private void setMenuInterface()
     {
         // Updates the Menu looks based on the current node
@@ -132,7 +152,9 @@ public class Game{
         return gameGraph.nextNode(currentNode, choiceIndex).getDescription();
     }
 
-
+    /**
+    *Unimplemented method that would progress the game into the next choice.
+    */
     public void updateGameState()
     {
 
@@ -142,7 +164,6 @@ public class Game{
      * updateGraphNode
      * Function to update game position (will need alterations to account for UI implementation)
      * @param choiceIndex
-     * @return
      */
     public void updateGraphNode(int choiceIndex)
     {
@@ -154,8 +175,7 @@ public class Game{
     /**
      * checkGameOver
      * Function to check if game is completed by checking for empty description
-     * @param n
-     * @return
+     * @param n Node to be checked
      */
     public void checkGameOver(Graph.Node n)
     {
@@ -170,7 +190,10 @@ public class Game{
             windowingService.activateComponent(endMenu);
         }
     }
-
+    /**
+    *Loads the image related to the current node.
+    *@param currentNode The node the player is currently in.
+    */
     public void loadImage(Graph.Node currentNode) {
         String imagePath = currentNode.getImagePath();
         if (imagePath != null && !imagePath.isEmpty()) {
