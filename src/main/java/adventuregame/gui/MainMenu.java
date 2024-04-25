@@ -9,6 +9,11 @@ import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
+/**
+ * Represents the main menu interface of the game, providing options to start a new game,
+ * load a saved game, access achievements, modify settings, and quit the game.
+ */
 public class MainMenu extends JComponent {
 
 
@@ -29,6 +34,9 @@ public class MainMenu extends JComponent {
     public Event<Void> onMenuInit = new BindableEvent<>();
     public Event<Void> onGameLoad = new BindableEvent<>();
 
+    /**
+     * Constructs and initializes the main menu with its components and layout.
+     */
     public MainMenu() {
         // Initialize variables
         // Set up main screen
