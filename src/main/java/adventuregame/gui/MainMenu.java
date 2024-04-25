@@ -122,7 +122,12 @@ public class MainMenu extends JComponent {
                 onGameLoad.Fire();
             }
         });
-
+        quitB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
         // Add the buttonPanel to the center of the MainMenu
         add(buttonPanel);
 
